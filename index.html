@@ -2,123 +2,104 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <style>
-        .outline {
-            outline: rgb(255, 0, 0) ridge 3px;
-            outline-offset: 10px;
-        }
-    </style>
     <meta name ="description" content="Лучшие магазин электроники на всё СНГ пространстве. Здесь вы найдёте такие вещи, как смартфоны, комплектующие для ПК и много другое." />
     <meta name ="keywords" content="интернет магазин, электроника, реклама, смартфоны" />
+    <link rel="stylesheet" href="style.css">
     <title>Электроника от Великодного Александра</title>
 </head>
 <body>
 <header>
-    <h1>Электроника от Великодного Александра</h1>
-    <ul>
-        <li><a href="#"><i></i>Доставка</a></li>
-        <li><a href="#"><i></i>Магазины</a></li>
-    </ul>
-    <nav>
+    <p class="leftimg"><img src="photos/logo.jpg" width="100" height="111" alt="Логотип сайта"></p>
+    <h1 class="p-1">Электроника от Великодного Александра</h1>
+    <br><br>
+    <div>
+        <form>
+            <input type="text" placeholder="Искать здесь...">
+            <button type="submit"></button>
+        </form>
+    </div>
+    <br>
+    <div class="buttonkatalog">
+        <button class="dropdown">Каталог товаров</button>
+        <div class="sections">
+            <a href="#">Смартфоны</a>
+            <a href="#">Комплектующие для ПК</a>
+            <a href="#">Ноутбуки</a>
+        </div>
+    </div>
+    <br>
+    <div class="content">
+        <nav class="menu">
         <ul>
-            <li><a href="#"><i></i>Войти</a></li>
-            <li><a href="#"><i></i>Регистрация</a></li>
-            <li><a href="#"><i></i>Корзина</a></li>
+            <li><a href="#">Войти</a></li>
+            <li><a href="#">Регистрация</a></li>
+            <li><a href="#">Корзина</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Магазины</a></li>
         </ul>
-    </nav>
+        </nav>
+    </div>
 </header>
 <main>
-    <section><h2>Популярные категории</h2></section>
+    <section><h2 class="p-2">Популярные категории</h2></section>
     <h3>Смартфоны</h3>
     <ul>
         <li>
             <a href="#">Смартфоны</a>
-            <article>
-                <strong>Смартфон</strong> — мобильный телефон (современный — как правило, с сенсорным экраном), дополненный функциональностью карманного персонального компьютера.
-                <h4>Из чего состоит смартфон</h4>
-                <p><strong>Процессор</strong> — Процессор занимает не менее значимое по важности место в работе мобильного устройства. Главная его задача лежит в обработке передаваемых данных. Можно сказать, что процессор – это «двигатель» смартфона, главная вычислительная мощность, он отвечает за быстродействие телефона, его адекватную работу, возможность одновременного выполнения нескольких опций так, чтобы при этом операция не отразилась негативным образом на быстродействии.</p>
-
-            </article>
+            <p class="leftimg"><img src="photos/pocox3pro.jpg"  alt="Xiaomi x3Pro"></p>
         </li>
-        <li><a href="#"><i></i>Аксессуары для смартфонов</a></li>
-        <li><a href="#">Кнопочные телефоны</a></li>
+        <br><br>
+        <li>
+            <a href="#">Аксессуары для смартфонов</a>
+            <p class="img"><img src="photos/fenrir.jpg" alt="Чехлы на телефон"></p>
+        </li>
+        <br><br>
+        <li>
+            <a href="#">Кнопочные телефоны</a>
+            <p class="img"><img src="photos/nokia.jpg" alt="Телефон нокиа"></p>
+        </li>
     </ul>
     <aside>
         Здесь могла быть ваша реклама
     </aside>
-    <h4>Комплектующие для ПК</h4>
+    <h3>Комплектующие для ПК</h3>
     <ul>
-        <li><a href="#">Процессоры</a></li>
-        <li><a href="#"><i></i>Материнские платы</a></li>
-        <li><a href="#">Видеокарты</a></li>
+        <li>
+            <a href="#">Процессоры</a>
+            <p class="img"><img src="photos/intel.jpg" alt="Процессоры"></p>
+        </li>
+        <li>
+            <a href="#">Материнские платы</a>
+            <p class="img"><img src="photos/mat.jpg" alt="Материнские платы"></p>
+        </li>
+        <li>
+            <a href="#">Видеокарты</a>
+            <p class="img"><img src="photos/vidokarta.jpg" alt="Видеокарты"></p>
+        </li>
     </ul>
-    <h4>Ноутбуки</h4>
+    <h3>Ноутбуки</h3>
     <ul>
-        <li><a href="#">Игровые ноутбуки</a></li>
-        <li><a href="#"><i></i>Ультрабуки</a></li>
+        <li>
+            <a href="#">Игровые ноутбуки</a>
+            <p class="img"><img src="photos/gamenoot.jpg" alt="Игровые ноутбуки"></p>
+        </li>
+        <li>
+            <a href="#">MacBook</a>
+            <p class="img"><img src="photos/macbook.jpg" alt="MacBook"></p>
+        </li>
+        <li>
+            <a href="#">Ультрабуки</a>
+            <p class="img"><img src="photos/ultrabook.jpg" alt="Ультрабуки"></p>
+        </li>
     </ul>
 </main>
 <footer>
-    <h5>Контактные данные разработчика</h5>
+    <h4>Контактные данные разработчика</h4>
     <ul>
         <li>+7-905-433-**-**</li>
         <li>284450@niuitmo.ru</li>
         <li><a href="https://vk.com/belython">VK</a></li>
     </ul>
-    <h5>Любимые цитаты, формулы, рисунки ASCII и куски кода автора</h5>
-    <p>Цитаты</p>
-    <blockquote>
-        <p>Белый человек должен с великолепным равнодушием встречать неудачи, должен обладать колоссальным самомнением, уверенностью, что всё, что бы он ни сделал, правильно;
-            должен, наконец, непоколебимо верить в своё расовое превосходство и никогда не сомневаться в том,
-            что один белый в любое время может справиться с тысячью чёрных, а по воскресным дням- с двумя тысячами.</p>
-        <cite>Джек Лондон</cite>
-    </blockquote>
-    <p>Формулы</p>
-    C<sub>2</sub>H<sub>5</sub>OH<br>
-    y=x<sup>2</sup>
-
-    <p>Картинки</p>
-    <pre>
-            ░░░░░░░░░░░░░░░░░░░░
-            ░░░░░ЗАПУСКАЕМ░░░░░░░
-            ░ГУСЯ░▄▀▀▀▄░РАБОТЯГИ░░
-            ▄███▀░◐░░░▌░░░░░░░░░
-            ░░░░▌░░░░░▐░░░░░░░░░
-            ░░░░▐░░░░░▐░░░░░░░░░
-            ░░░░▌░░░░░▐▄▄░░░░░░░
-            ░░░░▌░░░░▄▀▒▒▀▀▀▀▄
-            ░░░▐░░░░▐▒▒▒▒▒▒▒▒▀▀▄
-            ░░░▐░░░░▐▄▒▒▒▒▒▒▒▒▒▒▀▄
-            ░░░░▀▄░░░░▀▄▒▒▒▒▒▒▒▒▒▒▀▄
-            ░░░░░░▀▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▀▄
-            ░░░░░░░░░░░▌▌░▌▌░░░░░
-            ░░░░░░░░░░░▌▌░▌▌░░░░░
-            ░░░░░░░░░▄▄▌▌▄▌▌░░░░░
-        </pre>
-    <p> Коды
-    <pre><code>
-                /*
-                 public class Shop
-                 {
-                    private int id;
-                    public string name;
-                    public string adres;
-                    private ListProduct prodList = new ListProduct();
-                    public Shop(int id, string name, string adres)
-                    {
-                        this.id = id;
-                        this.name = name;
-                        this.adres = adres;
-                    }
-
-                    public void addProduct(Product prod)
-                    {
-                        prodList.Add(prod);
-                    }
-                 }
-                */ Ладно, отчёт на почту
-            </code></pre>
-    </p>
 </footer>
 </body>
 </html>
