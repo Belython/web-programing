@@ -5,24 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57ad19f0-062f-4632-b427-c7764fba53d0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/web-programing.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/fenrir.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/gamenoot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/intel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/macbook.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/mat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/nokia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/pocox3pro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/ultrabook.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos/vidokarta.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Макет интренет-магазин электроники.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/web-programing.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photos/fenrir.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photos/gamenoot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photos/intel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photos/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photos/macbook.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photos/mat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photos/nokia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photos/pocox3pro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photos/ultrabook.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../photos/vidokarta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Макет интренет-магазин электроники.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1xqTVEAMOy58zigw0wXMRzUk3ZY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -91,7 +91,8 @@
       <workItem from="1633505384379" duration="607000" />
       <workItem from="1633515053591" duration="1615000" />
       <workItem from="1634141624151" duration="382000" />
-      <workItem from="1634640503344" duration="1105000" />
+      <workItem from="1634640503344" duration="616000" />
+      <workItem from="1634641639270" duration="4618000" />
     </task>
     <servers />
   </component>
