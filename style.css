@@ -6,7 +6,7 @@
 
 .menu {
     width: 100%;
-    background: #ffff72;
+    background: #ff8000;
     max-width: fit-content;
 }
 .menu ul{
@@ -53,7 +53,7 @@
 .sections{
     display: none;
     position: absolute;
-    background-color: #ffff72;
+    background-color: #ff8000;
     z-index: 10;
 }
 
@@ -74,8 +74,8 @@
     font-family: "Times New Roman";
     font-weight: 900;
     text-align: left;
-    background: #fff47f;
-    color: #a02727;
+    background: #ff8000;
+    color: #000000;
     margin-top: 10px;
     word-spacing: 3px;
     font-style: oblique;
@@ -88,8 +88,8 @@
     font-family: "Times New Roman";
     font-weight: 900;
     text-align: center;
-    background: #fff47f;
-    color: #a02727;
+    background: #ff8000;
+    color: rgb(0, 0, 0);
     margin-top: 10px;
     word-spacing: 3px;
     font-style: oblique;
@@ -128,7 +128,7 @@
 
 .menu-footer {
     width: 100%;
-    background: #ffff72;
+    background: #ff8000;
     max-width: fit-content;
     margin: auto;
 }
@@ -161,6 +161,13 @@
     width: 100%;
 }
 
+.img_ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 @media screen and (max-width: 1186px) {
     .post-itm{
         width: 70%;
@@ -179,6 +186,8 @@
     }
     .menu-container-footer{
         display: flex;
+        z-index: 999;
+        position: fixed;
     }
 
 }
