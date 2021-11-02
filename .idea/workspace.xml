@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57ad19f0-062f-4632-b427-c7764fba53d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Motherboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VideoCard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accessories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gamenoot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macbook.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/photos/Push-button telephones.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pusPhone.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ultrabook.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/smartphfon.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +51,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.VidoCard.html">
+  <component name="RunManager" selected="JavaScript Debug.main.html">
     <configuration name="VidoCard.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web-programing/VidoCard.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -75,8 +63,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.VidoCard.html" />
         <item itemvalue="JavaScript Debug.main.html" />
+        <item itemvalue="JavaScript Debug.VidoCard.html" />
         <item itemvalue="JavaScript Debug.test.html" />
       </list>
     </recent_temporary>
@@ -106,7 +94,7 @@
       <workItem from="1634658346403" duration="173000" />
       <workItem from="1634707285380" duration="5505000" />
       <workItem from="1635851327871" duration="8738000" />
-      <workItem from="1635866270157" duration="3675000" />
+      <workItem from="1635866270157" duration="4301000" />
     </task>
     <servers />
   </component>
