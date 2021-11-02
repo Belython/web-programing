@@ -195,3 +195,14 @@
 .carousel img{
     height: 500px;
 }
+
+.active{
+    background: #eeeeee;
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+
+.active-desktop-link {
+    border-bottom: 2px solid #ffffff;
+}

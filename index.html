@@ -7,29 +7,30 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="/js/script.js"></script>
+    <script src="js/bootstrap.js"></script>
     <style>
         img {
             border: 0 !important;
         }
     </style>
 </head>
-<body>
+<body data-id-page="index">
     <nav class="navbar navbar-expand-xl navbar-light" style="background-color: #ff8000;">
         <div class="container">
-            <a href="" class="navbar-brand">Электроника от Великодного Александра</a>
+            <a href="index.html" class="navbar-brand">Электроника от Великодного Александра</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
+            <div id="navbarContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav me-2 mb-2">
                     <li class="nav-item">
-                        <a href="" class="nav-link">Корзина</a>
+                        <a href="#" class="nav-link" data-id-nav="Buy">Корзина</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Доставка</a>
+                        <a href="pages/delivery.html" class="nav-link" data-id-nav="Delivery">Доставка</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Магазины</a>
+                        <a href="pages/Shops.html" class="nav-link" data-id-nav="Shops">Магазины</a>
                     </li>
                 </ul>
                 <form action="" class="d-flex">
@@ -41,6 +42,7 @@
                     <button class="btn btn-outline-danger ms-3" data-bs-toggle="modal" data-bs-target="#exRegistr">Регистрация</button>
                 </div>
             </div>
+            <script>shineLinks("navbarContent");</script>
         </div>
     </nav>
     <div class="modal fade" id="exModal" tabindex="-1" aria-hidden="true" aria-labelledby="exModalLable">
@@ -221,7 +223,9 @@
         <li>284450@niuitmo.ru</li>
         <li><a href="https://vk.com/belython">VK</a></li>
     </ul>
+    <script>
+        date()
+    </script>
 </footer>
-<script src="js/bootstrap.js"></script>
 </body>
 </html>
