@@ -11,65 +11,147 @@
             border: 0 !important;
         }
     </style>
-    <script>
-        function toggleKatalog() {
-            var el = document.getElementById("katalog");
-            if (el.classList.contains("sections__show")) {
-                el.classList.remove("sections__show");
-            } else {
-                el.classList.add("sections__show");
-            }
-        }
-    </script>
 </head>
 <body>
-<header class="clearfix">
-    <div style="float: left; width: 50%">
-        <table>
-            <tr>
-                <td rowspan="2"><img class="img2" src="photos/logo.jpg" alt="Логотип сайта"></td>
-                <td colspan="2"><h1 class="p-1">Электроника от Великодного Александра</h1></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <div class="search">
-                        <form>
-                            <input type="text" placeholder="Искать здесь...">
-                            <button type="submit"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-hand-index-thumb" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M6.75 1a.75.75 0 0 0-.75.75V9.5a.5.5 0 0 1-.854.354l-2.41-2.411a.517.517 0 0 0-.809.631l2.512 4.185 1.232 2.465a.5.5 0 0 0 .447.276h6.302a.5.5 0 0 0 .434-.252l1.395-2.442a2.5 2.5 0 0 0 .317-.991l.272-2.715a1 1 0 0 0-.995-1.1H13.5v1a.5.5 0 1 1-1 0V7.154a4.208 4.208 0 0 0-.2-.26c-.187-.222-.368-.383-.486-.43-.124-.05-.392-.063-.708-.039a4.844 4.844 0 0 0-.106.01V8a.5.5 0 1 1-1 0V5.986c0-.167-.073-.272-.15-.314a1.657 1.657 0 0 0-.448-.182c-.179-.035-.5-.04-.816-.027l-.086.004V8a.5.5 0 1 1-1 0V1.75A.75.75 0 0 0 6.75 1zM8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v6.543L3.443 6.736A1.517 1.517 0 0 0 1.07 8.588l2.491 4.153 1.215 2.43A1.5 1.5 0 0 0 6.118 16h6.302a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.272-2.715a2 2 0 0 0-1.99-2.199h-.582a5.114 5.114 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.634 2.634 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046l-.048.002zm2.094 2.025z"/>
-                            </svg></button>
-                        </form>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <div class="buttonkatalog">
-                        <button class="dropdown" onclick="toggleKatalog()">Каталог товаров</button>
-                        <div id="katalog" class="sections">
-                            <a href="#">Смартфоны</a>
-                            <a href="#">Комплектующие для ПК</a>
-                            <a href="#">Ноутбуки</a>
+    <nav class="navbar navbar-expand-xl navbar-light" style="background-color: #ff8000;">
+        <div class="container">
+            <a href="" class="navbar-brand">Электроника от Великодного Александра</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-2 mb-2">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Регистрация</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Корзина</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Доставка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Магазины</a>
+                    </li>
+                </ul>
+                <form action="" class="d-flex">
+                    <input type="search" placeholder="Поиск..." class="form-control me-2">
+                    <button class="btn btn-outline-dark">Поиск</button>
+                </form>
+                <div class="d-flex">
+                    <button class="btn btn-outline-success ms-3" data-bs-toggle="modal" data-bs-target="#exModal">Войти</button>
+                    <button class="btn btn-outline-danger ms-3" data-bs-toggle="modal" data-bs-target="#exRegistr">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="exModal" tabindex="-1" aria-hidden="true" aria-labelledby="exModalLable">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exModalLable">Авторизация</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row mb-3">
+                            <label for="" class="col-sm-2 col-form-label">Почта</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control">
+                            </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
+                        <div class="row mb-3">
+                            <label for="" class="col-sm-2 col-form-label">Пароль</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="close"> Войти</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="menu-container">
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Войти</a></li>
-                <li><a href="#">Регистрация</a></li>
-                <li><a href="#">Корзина</a></li>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Магазины</a></li>
-            </ul>
-        </nav>
+    <div class="modal fade" id="exRegistr" tabindex="-1" aria-hidden="true" aria-labelledby="exModalLable">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exRegistrLable">Регистрация</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row mb-3">
+                            <label for="" class="col-sm-2 col-form-label">Введите имя</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="" class="col-sm-2 col-form-label">Введите фамилию</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="" class="col-sm-2 col-form-label">Введите дату рождения</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="" class="col-sm-2 col-form-label">Введите почту</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="" class="col-sm-2 col-form-label">Введите пароль</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="" class="col-sm-2 col-form-label">Введите пароль повторно</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="close"> Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
     </div>
-</header>
-<main>````````````````````
-    <section><h2 class="p-2">Популярные категории</h2></section>
+<main>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="photos/sale.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="photos/dostavka.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="photos/unnamed.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+        </button>
+    </div>
 
     <div class="container">
         <h3 class="text-center my-5">Смартфоны</h3>
@@ -78,7 +160,7 @@
                 <div style="display: flex; justify-content: space-around; align-items: center; height: 100%">
                     <img class="img-thumbnail post-itm" src="photos/pocox3pro.jpg" style="height: 220px;">
                 </div>
-                <a class="text-center" href="#" style="padding-bottom: 20px">Смартфоны</a>
+                <a class="text-center" href="index2.html" style="padding-bottom: 20px">Смартфоны</a>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 text-center rounded float-left img_" style="border: 2px #ff8000 solid; width: 408px">
                 <div style="display: flex; justify-content: space-around; align-items: center; height: 100%">
@@ -138,17 +220,6 @@
     </div>
 </main>
 <footer>
-    <div class="menu-container-footer">
-        <nav class="menu-footer">
-            <ul>
-                <li><a href="#">Войти</a></li>
-                <li><a href="#">Регистрация</a></li>
-                <li><a href="#">Корзина</a></li>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Магазины</a></li>
-            </ul>
-        </nav>
-    </div>
     <h4 class="p-2">Контактные данные разработчика</h4>
     <ul>
         <li>+7-905-433-**-**</li>
@@ -156,5 +227,6 @@
         <li><a href="https://vk.com/belython">VK</a></li>
     </ul>
 </footer>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
