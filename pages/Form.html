@@ -13,7 +13,7 @@
     }
   </style>
 </head>
-<body>
+<body data-id-page="Shops">
 <nav class="navbar navbar-expand-xl navbar-light" style="background-color: #ff8000;">
   <div class="container">
     <a href="../index.html" class="navbar-brand">Электроника от Великодного Александра</a>
@@ -129,59 +129,33 @@
   </div>
 </div>
 <main>
+
   <div class="container">
-    <h3 class="text-center my-5">Кнопочные телефоны</h3>
-    <div class="row">
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 text-center rounded float-left img_" style="border: 2px #ff8000 solid; width: 408px">
-        <div style="display: flex; justify-content: space-around; align-items: center; height: 100%">
-          <img class="img-thumbnail post-itm" src="../photos/push1.jpg" style="height: 220px;">
+    <h2>Добавить задачу</h2>
+    <form>
+      <div class="row">
+          <input type="text" placeholder="Описание"
+                 class="form-control message">
+          <button class="btn btn-outline-dark add" style="background-color: #ff8000;">Добавить</button>
         </div>
-        <a class="text-center" href="#" style="padding-bottom: 20px">Сотовый телефон SUNWIND CITI C2401, синий</a>
-      </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 text-center rounded float-left img_" style="border: 2px #ff8000 solid; width: 408px">
-        <div style="display: flex; justify-content: space-around; align-items: center; height: 100%">
-          <img class="img-thumbnail post-itm" src="../photos/nokia.jpg" style="height: 220px;">
-        </div>
-        <a class="text-center" href="#" style="padding-bottom: 20px">Сотовый телефон SUNWIND CITI A1701, черный</a>
-      </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 text-center rounded float-left img_" style="border: 2px #ff8000 solid; width: 408px">
-        <div style="display: flex; justify-content: space-around; align-items: center; height: 100%">
-          <img class="img-thumbnail post-itm" src="../photos/push2.jpg" style="height: 220px;">
-        </div>
-        <a class="text-center" href="#" style="padding-bottom: 20px">Сотовый телефон DIGMA Linx S240, серый/оранжевый</a>
-      </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 text-center rounded float-left img_" style="border: 2px #ff8000 solid; width: 408px">
-        <div style="display: flex; justify-content: space-around; align-items: center; height: 100%">
-          <img class="img-thumbnail post-itm" src="../photos/push3.jpg" style="height: 220px;">
-        </div>
-        <a class="text-center" href="#" style="padding-bottom: 20px">Сотовый телефон PANASONIC TU456, красный</a>
-      </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 text-center rounded float-left img_" style="border: 2px #ff8000 solid; width: 408px">
-        <div style="display: flex; justify-content: space-around; align-items: center; height: 100%">
-          <img class="img-thumbnail post-itm" src="../photos/push4.jpg" style="height: 220px;">
-        </div>
-        <a class="text-center" href="#" style="padding-bottom: 20px">Сотовый телефон NOKIA 106, серый</a>
-      </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 text-center rounded float-left img_" style="border: 2px #ff8000 solid; width: 408px">
-        <div style="display: flex; justify-content: space-around; align-items: center; height: 100%">
-          <img class="img-thumbnail post-itm" src="../photos/push5.jpg" style="height: 220px;">
-        </div>
-        <a class="text-center" href="#" style="padding-bottom: 20px">Сотовый телефон PANASONIC TU150, красный</a>
-      </div>
+    </form>
+
+    <h3 class="mt-4">Задачи</h3>
+
+    <div class="wrapper">
+      <ul id="list" class="list-group todo"></ul>
     </div>
   </div>
+
+
+
 </main>
 <footer>
-  <h4 class="p-2">Контактные данные разработчика</h4>
-  <ul>
-    <li>+7-905-433-**-**</li>
-    <li>284450@niuitmo.ru</li>
-    <li><a href="https://vk.com/belython">VK</a></li>
-  </ul>
   <script>
     date()
   </script>
 </footer>
 <script src="../js/bootstrap.js"></script>
+<script src="/js/form.js"></script>
 </body>
 </html>
