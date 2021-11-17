@@ -6,6 +6,7 @@
   <meta name ="keywords" content="интернет магазин, электроника, реклама, смартфоны" />
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/Ratings.css">
   <script src="/js/script.js"></script>
   <style>
     img {
@@ -32,7 +33,7 @@
           <a href="Shops.html" class="nav-link">Магазины</a>
         </li>
         <li class="nav-item">
-          <a href="Form.html" class="nav-link">Создать таблицу</a>
+          <a href="Form.html" class="nav-link">Комментарии</a>
         </li>
       </ul>
       <form action="" class="d-flex">
@@ -44,6 +45,7 @@
         <button class="btn btn-outline-danger ms-3" data-bs-toggle="modal" data-bs-target="#exRegistr">Регистрация</button>
       </div>
     </div>
+    <script>shineLinks("navbarContent")</script>
   </div>
 </nav>
 <div class="modal fade" id="exModal" tabindex="-1" aria-hidden="true" aria-labelledby="exModalLable">
@@ -130,32 +132,96 @@
 </div>
 <main>
 
+
   <div class="container">
-    <h2>Добавить задачу</h2>
-    <form>
-      <div class="row">
-          <input type="text" placeholder="Описание"
-                 class="form-control message">
-          <button class="btn btn-outline-dark add" style="background-color: #ff8000;">Добавить</button>
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="p-3 text-center">
+          Комментарии сайта
+        </h2>
+      </div>
+      <div class="col-lg-6">
+        <div id="comment-field"></div>
+      </div>
+      <div class="col-lg-6">
+        <form>
+          <div class="form-group">
+            <label>Оцените сайт:</label>
+            <div class="form_item">
+              <div class="form_label"></div>
+              <div class="ratting rating_set">
+                <div class="rating_body">
+                  <div class="rating_active"></div>
+                  <div class="rating_items">
+                    <input type="radio" class="rating_item" value="1" name="rating">
+                    <input type="radio" class="rating_item" value="2" name="rating">
+                    <input type="radio" class="rating_item" value="3" name="rating">
+                    <input type="radio" class="rating_item" value="4" name="rating">
+                    <input type="radio" class="rating_item" value="5" name="rating">
+                  </div>
+                </div>
+                <div class="rating_value">0</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comment-name">Имя:</label>
+            <input type="email" class="form-control" id="comment-name"  placeholder="Введите имя">
+          </div>
+          <div class="form-group">
+            <label for="comment-plus">Достоинства:</label>
+            <textarea type="password" class="form-control" id="comment-plus" placeholder="Текст достоинств"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="comment-minus">Недостатки:</label>
+            <textarea type="password" class="form-control" id="comment-minus" placeholder="Текс недостатков"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="comment-body">Комментарий:</label>
+            <textarea type="password" class="form-control" id="comment-body" placeholder="Текст комментария"></textarea>
+          </div>
+          <div class="form-group ms-0">
+            <button type="submit" id="comment-add" class="btn btn-primary">Добавьте комментарий</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="form_item">
+    <div class="text-center form_label">Рейтинг сайта</div>
+    <div data-ajax="true" class="ratting rating_set d-flex justify-content-center">
+      <div class="rating_body">
+        <div class="rating_active"></div>
+        <div class="rating_items">
+          <input type="radio" class="rating_item" value="1" name="rating">
+          <input type="radio" class="rating_item" value="2" name="rating">
+          <input type="radio" class="rating_item" value="3" name="rating">
+          <input type="radio" class="rating_item" value="4" name="rating">
+          <input type="radio" class="rating_item" value="5" name="rating">
         </div>
-    </form>
-
-    <h3 class="mt-4">Задачи</h3>
-
-    <div class="wrapper">
-      <ul id="list" class="list-group todo"></ul>
+      </div>
+      <div class="rating_value">4.6</div>
     </div>
   </div>
 
 
 
+
 </main>
 <footer>
+  <h4 class="p-2">Контактные данные разработчика</h4>
+  <ul>
+    <li>+7-905-433-**-**</li>
+    <li>284450@niuitmo.ru</li>
+    <li><a href="https://vk.com/belython">VK</a></li>
+  </ul>
   <script>
     date()
   </script>
 </footer>
 <script src="../js/bootstrap.js"></script>
 <script src="/js/form.js"></script>
+<script src="/js/Ratings.js"></script>
 </body>
 </html>
