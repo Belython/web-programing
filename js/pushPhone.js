@@ -2,11 +2,10 @@ var cart = {};
 
 $('document').ready(function (){
     loadProduct();
-    showCart();
 });
 
 function loadProduct(){
-    $.getJSON('/JSON/product.json', function (data){
+    $.getJSON('/JSON/pushphone.json', function (data){
         var out = '';
         for (var key in data){
             out += '<div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 text-center rounded float-left img_ js-cart" style="border: 2px #ff8000 solid; width: 408px">';
@@ -30,5 +29,5 @@ function addToCart(){
     }else{
         cart[id] = 1;
     }
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('cart2', JSON.stringify(cart));
 }

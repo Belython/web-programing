@@ -1,0 +1,32 @@
+{
+  "00037": {
+    "name": "Ультрабук Honor MagicBook 14 R5-3500U, 14, IPS, AMD Ryzen 5 3500U 2.1ГГц, 8ГБ, 256ГБ SSD, AMD Radeon Vega 8, Windows 10, 53011TEF, серый",
+    "price": "180000",
+    "img": "../photos/ul1.jpg"
+  },
+  "00038": {
+    "name": "Ультрабук Honor MagicBook X14, 14, IPS, Intel Core i3 10110U 2.1ГГц, 8ГБ, 256ГБ SSD, Intel UHD Graphics , Windows 10 Home, 53011TVN, серый",
+    "price": "250000",
+    "img": "../photos/ul2.jpg"
+  },
+  "00039": {
+    "name": "Ультрабук Honor MagicBook X15, 15.6\", IPS, Intel Core i3 10110U 2.1ГГц, 8ГБ, 256ГБ SSD, Intel UHD Graphics , Windows 10 Home, 53011UGC, серый",
+    "price": "350000",
+    "img": "../photos/ul3.jpg"
+  },
+  "00040": {
+    "name": "Ультрабук Honor MagicBook Pro 16.1\", IPS, AMD Ryzen 5 4600H 3.0ГГц, 16ГБ, 512ГБ SSD, AMD Radeon , Windows 10, 53011SYE, серебристый",
+    "price": "200000",
+    "img": "../photos/ul4.jpg"
+  },
+  "00041": {
+    "name": "Ультрабук Acer Swift 3 SF314-43-R0AL, 14\", IPS, AMD Ryzen 3 5300U 2.6ГГц, 8ГБ, 256ГБ SSD, AMD Radeon , Eshell, NX.AB1ER.004, серебристый",
+    "price": "190000",
+    "img": "../photos/ul5.jpg"
+  },
+  "00042": {
+    "name": "Ультрабук Lenovo Yoga S7 Pro 14IHU5, 14\", Intel Core i7 11370H 3.0ГГц, 16ГБ, 1ТБ SSD, NVIDIA GeForce MX450 - 2048 Мб, Windows 10, 82NH003ARU, серый",
+    "price": "105000",
+    "img": "../photos/ul6.jpg"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "00025": {
+    "name": "Процессор AMD Athlon 3000G, OEM",
+    "price": "12000",
+    "img": "../photos/proc1.jpg"
+  },
+  "00026": {
+    "name": "Процессор INTEL Core i5 10400F, LGA 1200, BOX [bx8070110400f s rh3d]",
+    "price": "12365",
+    "img": "../photos/proc2.jpg"
+  },
+  "00027": {
+    "name": "Процессор INTEL Core i5 10400F, LGA 1200, OEM [cm8070104290716s rh3d]",
+    "price": "9825",
+    "img": "../photos/proc3.jpg"
+  },
+  "00028": {
+    "name": "Процессор AMD Ryzen 5 5600X, SocketAM4, BOX [100-100000065box]",
+    "price": "95145",
+    "img": "../photos/proc4.jpg"
+  },
+  "00029": {
+    "name": "Процессор AMD Ryzen 5 1600, SocketAM4, BOX [yd1600bbafbox]",
+    "price": "12365",
+    "img": "../photos/proc5.jpg"
+  },
+  "00030": {
+    "name": "Процессор Intel Core i5 9400F, LGA 1151v2, OEM [cm8068403358819s rf6m]",
+    "price": "27540",
+    "img": "../photos/proc6.jpg"
+  }
+}
