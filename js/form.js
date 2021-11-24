@@ -1,7 +1,7 @@
 let comments = [];
 loadComments();
 
-document.getElementById('comment-add').onclick = function(){
+document.getElementById('comment-add').addEventListener('click', function(event){
     let commentName = document.getElementById('comment-name');
     let commentPlus = document.getElementById('comment-plus');
     let commentMinus = document.getElementById('comment-minus');
@@ -23,7 +23,7 @@ document.getElementById('comment-add').onclick = function(){
     comments.push(comment);
     saveComments();
     showComments();
-}
+})
 
 function saveComments(){
     localStorage.setItem('comments', JSON.stringify(comments));
