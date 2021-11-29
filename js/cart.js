@@ -9,7 +9,7 @@ var cart7 = [];
 var cart8 = [];
 
 
-$.getJSON('/JSON/product.json', function (data){
+$.getJSON('../JSON/product.json', function (data){
     var products = data;
     checkCart();
     showCart();
