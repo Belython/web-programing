@@ -61,7 +61,7 @@ function initRatings() {
         if(!rating.classList.contains('rating_sending')){
             rating.classList.add('rating_sending');
 
-            let response = await fetch('/JSON/rating.json', {
+            let response = await fetch('../JSON/rating.json', {
                 method: 'GET',
             });
             if(response.ok){
