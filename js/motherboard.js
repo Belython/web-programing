@@ -6,7 +6,7 @@ $('document').ready(function (){
 });
 
 function loadProduct(){
-    $.getJSON('/JSON/motherboard.json', function (data){
+    $.getJSON('../JSON/motherboard.json', function (data){
         var out = '';
         for (var key in data){
             out += '<div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 text-center rounded float-left img_ js-cart" style="border: 2px #ff8000 solid; width: 408px">';
