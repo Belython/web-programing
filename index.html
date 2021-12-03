@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="icon" type="img/png" href="photos/programmer.png">
-    <script src="/js/script.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/bootstrap.js"></script>
     <style>
         img {
             border: 0 !important;
@@ -24,7 +24,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbarContent" class="collapse navbar-collapse">
-                <ul class="navbar-nav me-2 mb-2">
+                <ul id="addLK" class="navbar-nav me-2 mb-2">
                     <li class="nav-item">
                         <a href="pages/Buy.html" class="nav-link" data-id-nav="Buy">Корзина</a>
                     </li>
@@ -42,43 +42,18 @@
                     <input type="search" placeholder="Поиск..." class="form-control me-2">
                     <button class="btn btn-outline-dark">Поиск</button>
                 </form>
+
                 <div class="d-flex pt-md-3 pt-sm-3 pt-xl-0 pt-lg-0">
-                    <button class="btn btn-outline-success ms-xl-3 ms-lg-3 ms-md-0 ms-sm-0" data-bs-toggle="modal" data-bs-target="#exModal">Войти</button>
-                    <button class="btn btn-outline-danger ms-xl-3 ms-lg-3 ms-md-3 ms-sm-3" data-bs-toggle="modal" data-bs-target="#exRegistr">Регистрация</button>
+                    <div id ="loadName">
+                        <button id="loadNameButton" class="loadNameButton btn btn-outline-success ms-xl-3 ms-lg-3 ms-md-0 ms-sm-0" data-bs-toggle="modal" data-bs-target="#exModal">Войти</button>
+                        <img id="preloader" src="../photos/preloader.gif">
+                    </div>
+                    <button id="reg" class="btn btn-outline-danger ms-xl-3 ms-lg-3 ms-md-3 ms-sm-3" data-bs-toggle="modal" data-bs-target="#exRegistr">Регистрация</button>
                 </div>
             </div>
             <script>shineLinks("navbarContent");</script>
         </div>
     </nav>
-    <div class="modal fade" id="exModal" tabindex="-1" aria-hidden="true" aria-labelledby="exModalLable">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exModalLable">Авторизация</h5>
-                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="">
-                        <div class="row mb-3">
-                            <label for="" class="col-sm-2 col-form-label">Почта</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="" class="col-sm-2 col-form-label">Пароль</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-bs-dismiss="close"> Войти</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="modal fade" id="exRegistr" tabindex="-1" aria-hidden="true" aria-labelledby="exModalLable">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -280,5 +255,7 @@
         date()
     </script>
 </footer>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/Network.js"></script>
 </body>
 </html>

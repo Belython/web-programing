@@ -283,3 +283,13 @@
     border-radius: 4px
 }
 
+#preloader{
+    height: 50px;
+    width: 100%;
+    display: flex;
+}
+
+
+#preloader.hide-preloader{
+    display: none;
+}
