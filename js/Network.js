@@ -41,8 +41,7 @@ function addLK(){
 
 function loadJSON(data){
     if (!inLK) {
-        let preloader = document.getElementById('preloader');
-        preloader.classList.add('hide-preloader');
+        document.getElementById('preloader').remove();;
     }
     var out = '';
     //console.log(count);
