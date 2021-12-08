@@ -15,217 +15,229 @@ $.getJSON('../JSON/product.json', function (data){
     showCart();
 
     function showCart(){
+
         var out = '';
+        var outSmarphon ='';
+        var outPK ='';
+        var outNote ='';
         var sum = 0;
         if($.isEmptyObject(cart) && $.isEmptyObject(cart1) && $.isEmptyObject(cart2) && $.isEmptyObject(cart3) && $.isEmptyObject(cart4) && $.isEmptyObject(cart5) && $.isEmptyObject(cart6) && $.isEmptyObject(cart7) && $.isEmptyObject(cart8))
         {
             out +='<h4 class="text-center">В корзине нет товаров</h4>';
             out +='<h5 class="text-center">Найдите то, что вам нужно в каталоге или при помощи поиска</h5>';
-            out +='<form action="../index.html" class="text-center">';
+            out +='<form action="../pages/index.html" class="text-center">';
             out +='<button class="btn btn-outline-dark" style="background-color: #ff8000;">Вернуться к покупкам</button>';
             out +='</form>';
+            document.getElementById('del').remove();
         }else {
             for (var key in cart){
-                out += '<div style="border: 2px #ff8000 solid; width: 408px">'
-                out += '<button data-art="'+key+'" class="delete btn btn-danger">x </button>';
-                out += '<div class="img_">';
-                out+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
-                out+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
-                out+='</div>';
-                out += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
-                out+='</div>';
-                out += '<br>'
-                out +='<div class="d-block mx-auto text-center">'
-                out += '<button data-art="'+key+'" class="minus btn btn-info">- </button>';
-                out+=cart[key];
-                out += '<button data-art="'+key+'" class="plus btn btn-info">+ </button>';
-                out+='</div>';
-                out += '<br>'
-                out += '<p class="text-center"> Итоговая цена за товар: '
+                outSmarphon += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outSmarphon+= '<button data-art="'+key+'" class="delete btn btn-danger">x </button>';
+                outSmarphon += '<div class="img_">';
+                outSmarphon+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
+                outSmarphon+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
+                outSmarphon+='</div>';
+                outSmarphon += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
+                outSmarphon+='</div>';
+                outSmarphon += '<br>'
+                outSmarphon +='<div class="d-block mx-auto text-center">'
+                outSmarphon += '<button data-art="'+key+'" class="minus btn btn-info">- </button>';
+                outSmarphon+=cart[key];
+                outSmarphon += '<button data-art="'+key+'" class="plus btn btn-info">+ </button>';
+                outSmarphon+='</div>';
+                outSmarphon += '<br>'
+                outSmarphon += '<p class="text-center"> Итоговая цена за товар: '
                 sum += cart[key] * products[key]['price'];
-                out+=cart[key] * products[key]['price'];
-                out += '</p>'
-                out+='</div>';
+                outSmarphon+=cart[key] * products[key]['price'];
+                outSmarphon += '</p>'
+                outSmarphon+='</div>';
             }
             for (var key in cart1){
-                out += '<div style="border: 2px #ff8000 solid; width: 408px">'
-                out += '<button data-art="'+key+'" class="delete1 btn btn-danger">x </button>';
-                out += '<div class="img_">';
-                out+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
-                out+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
-                out+='</div>';
-                out += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
-                out+='</div>';
-                out += '<br>'
-                out +='<div class="d-block mx-auto text-center">'
-                out += '<button data-art="'+key+'" class="minus1 btn btn-info">- </button>';
-                out+=cart1[key];
-                out += '<button data-art="'+key+'" class="plus1 btn btn-info">+ </button>';
-                out+='</div>';
-                out += '<br>'
-                out += '<p class="text-center"> Итоговая цена за товар: '
+                outSmarphon+= '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outSmarphon += '<button data-art="'+key+'" class="delete1 btn btn-danger">x </button>';
+                outSmarphon+= '<div class="img_">';
+                outSmarphon+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
+                outSmarphon+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
+                outSmarphon+='</div>';
+                outSmarphon += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
+                outSmarphon+='</div>';
+                outSmarphon += '<br>'
+                outSmarphon +='<div class="d-block mx-auto text-center">'
+                outSmarphon += '<button data-art="'+key+'" class="minus1 btn btn-info">- </button>';
+                outSmarphon+=cart1[key];
+                outSmarphon += '<button data-art="'+key+'" class="plus1 btn btn-info">+ </button>';
+                outSmarphon+='</div>';
+                outSmarphon += '<br>'
+                outSmarphon += '<p class="text-center"> Итоговая цена за товар: '
                 sum +=cart1[key] * products[key]['price'];
-                out+=cart1[key] * products[key]['price'];
-                out += '</p>'
-                out+='</div>';
+                outSmarphon+=cart1[key] * products[key]['price'];
+                outSmarphon += '</p>'
+                outSmarphon+='</div>';
             }
             for (var key in cart2){
-                out += '<div style="border: 2px #ff8000 solid; width: 408px">'
-                out += '<button data-art="'+key+'" class="delete2 btn btn-danger">x </button>';
-                out += '<div class="img_">';
-                out+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
-                out+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
-                out+='</div>';
-                out += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
-                out+='</div>';
-                out += '<br>'
-                out +='<div class="d-block mx-auto text-center">'
-                out += '<button data-art="'+key+'" class="minus2 btn btn-info">- </button>';
-                out+=cart2[key];
-                out += '<button data-art="'+key+'" class="plus2 btn btn-info">+ </button>';
-                out+='</div>';
-                out += '<br>'
-                out += '<p class="text-center"> Итоговая цена за товар: '
+                outSmarphon += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outSmarphon += '<button data-art="'+key+'" class="delete2 btn btn-danger">x </button>';
+                outSmarphon+= '<div class="img_">';
+                outSmarphon+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
+                outSmarphon+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
+                outSmarphon+='</div>';
+                outSmarphon += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
+                outSmarphon+='</div>';
+                outSmarphon += '<br>'
+                outSmarphon +='<div class="d-block mx-auto text-center">'
+                outSmarphon += '<button data-art="'+key+'" class="minus2 btn btn-info">- </button>';
+                outSmarphon+=cart2[key];
+                outSmarphon += '<button data-art="'+key+'" class="plus2 btn btn-info">+ </button>';
+                outSmarphon+='</div>';
+                outSmarphon += '<br>'
+                outSmarphon += '<p class="text-center"> Итоговая цена за товар: '
                 sum += cart2[key] * products[key]['price'];
-                out+=cart2[key] * products[key]['price'];
-                out += '</p>'
-                out+='</div>';
+                outSmarphon+=cart2[key] * products[key]['price'];
+                outSmarphon += '</p>'
+                outSmarphon+='</div>';
             }
             for (var key in cart3){
-                out += '<div style="border: 2px #ff8000 solid; width: 408px">'
-                out += '<button data-art="'+key+'" class="delete3 btn btn-danger">x </button>';
-                out += '<div class="img_">';
-                out+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
-                out+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
-                out+='</div>';
-                out += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
-                out+='</div>';
-                out += '<br>'
-                out +='<div class="d-block mx-auto text-center">'
-                out += '<button data-art="'+key+'" class="minus3 btn btn-info">- </button>';
-                out+=cart3[key];
-                out += '<button data-art="'+key+'" class="plus3 btn btn-info">+ </button>';
-                out+='</div>';
-                out += '<br>'
-                out += '<p class="text-center"> Итоговая цена за товар: '
+                outPK += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outPK += '<button data-art="'+key+'" class="delete3 btn btn-danger">x </button>';
+                outPK += '<div class="img_">';
+                outPK+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
+                outPK+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
+                outPK+='</div>';
+                outPK += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
+                outPK+='</div>';
+                outPK += '<br>'
+                outPK +='<div class="d-block mx-auto text-center">'
+                outPK += '<button data-art="'+key+'" class="minus3 btn btn-info">- </button>';
+                outPK+=cart3[key];
+                outPK += '<button data-art="'+key+'" class="plus3 btn btn-info">+ </button>';
+                outPK+='</div>';
+                outPK += '<br>'
+                outPK += '<p class="text-center"> Итоговая цена за товар: '
                 sum += cart3[key] * products[key]['price'];
-                out+=cart3[key] * products[key]['price'];
-                out += '</p>'
-                out+='</div>';
+                outPK+=cart3[key] * products[key]['price'];
+                outPK += '</p>'
+                outPK+='</div>';
             }
             for (var key in cart4){
-                out += '<div style="border: 2px #ff8000 solid; width: 408px">'
-                out += '<button data-art="'+key+'" class="delete4 btn btn-danger">x </button>';
-                out += '<div class="img_">';
-                out+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
-                out+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
-                out+='</div>';
-                out += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
-                out+='</div>';
-                out += '<br>'
-                out +='<div class="d-block mx-auto text-center">'
-                out += '<button data-art="'+key+'" class="minus4 btn btn-info">- </button>';
-                out+=cart4[key];
-                out += '<button data-art="'+key+'" class="plus4 btn btn-info">+ </button>';
-                out+='</div>';
-                out += '<br>'
-                out += '<p class="text-center"> Итоговая цена за товар: '
+                outPK += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outPK += '<button data-art="'+key+'" class="delete4 btn btn-danger">x </button>';
+                outPK+= '<div class="img_">';
+                outPK+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
+                outPK+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
+                outPK+='</div>';
+                outPK += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
+                outPK+='</div>';
+                outPK += '<br>'
+                outPK +='<div class="d-block mx-auto text-center">'
+                outPK += '<button data-art="'+key+'" class="minus4 btn btn-info">- </button>';
+                outPK+=cart4[key];
+                outPK += '<button data-art="'+key+'" class="plus4 btn btn-info">+ </button>';
+                outPK+='</div>';
+                outPK+= '<br>'
+                outPK += '<p class="text-center"> Итоговая цена за товар: '
                 sum += cart4[key] * products[key]['price'];
-                out+=cart4[key] * products[key]['price'];
-                out += '</p>'
-                out+='</div>';
+                outPK+=cart4[key] * products[key]['price'];
+                outPK += '</p>'
+                outPK+='</div>';
             }
             for (var key in cart5){
-                out += '<div style="border: 2px #ff8000 solid; width: 408px">'
-                out += '<button data-art="'+key+'" class="delete5 btn btn-danger">x </button>';
-                out += '<div class="img_">';
-                out+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
-                out+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
-                out+='</div>';
-                out += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
-                out+='</div>';
-                out += '<br>'
-                out +='<div class="d-block mx-auto text-center">'
-                out += '<button data-art="'+key+'" class="minus5 btn btn-info">- </button>';
-                out+=cart5[key];
-                out += '<button data-art="'+key+'" class="plus5 btn btn-info">+ </button>';
-                out+='</div>';
-                out += '<br>'
-                out += '<p class="text-center"> Итоговая цена за товар: '
+                outPK += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outPK += '<button data-art="'+key+'" class="delete5 btn btn-danger">x </button>';
+                outPK += '<div class="img_">';
+                outPK+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
+                outPK+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
+                outPK+='</div>';
+                outPK += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
+                outPK+='</div>';
+                outPK+= '<br>'
+                outPK +='<div class="d-block mx-auto text-center">'
+                outPK += '<button data-art="'+key+'" class="minus5 btn btn-info">- </button>';
+                outPK+=cart5[key];
+                outPK += '<button data-art="'+key+'" class="plus5 btn btn-info">+ </button>';
+                outPK+='</div>';
+                outPK += '<br>'
+                outPK += '<p class="text-center"> Итоговая цена за товар: '
                 sum += cart5[key] * products[key]['price'];
-                out+=cart5[key] * products[key]['price'];
-                out += '</p>'
-                out+='</div>';
+                outPK+=cart5[key] * products[key]['price'];
+                outPK += '</p>'
+                outPK+='</div>';
             }
             for (var key in cart6){
-                out += '<div style="border: 2px #ff8000 solid; width: 408px">'
-                out += '<button data-art="'+key+'" class="delete6 btn btn-danger">x </button>';
-                out += '<div class="img_">';
-                out+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
-                out+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
-                out+='</div>';
-                out += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
-                out+='</div>';
-                out += '<br>'
-                out +='<div class="d-block mx-auto text-center">'
-                out += '<button data-art="'+key+'" class="minus6 btn btn-info">- </button>';
-                out+=cart6[key];
-                out += '<button data-art="'+key+'" class="plus6 btn btn-info">+ </button>';
-                out+='</div>';
-                out += '<br>'
-                out += '<p class="text-center"> Итоговая цена за товар: '
+                outNote += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outNote += '<button data-art="'+key+'" class="delete6 btn btn-danger">x </button>';
+                outNote += '<div class="img_">';
+                outNote+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
+                outNote+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
+                outNote+='</div>';
+                outNote += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
+                outNote+='</div>';
+                outNote += '<br>'
+                outNote +='<div class="d-block mx-auto text-center">'
+                outNote += '<button data-art="'+key+'" class="minus6 btn btn-info">- </button>';
+                outNote+=cart6[key];
+                outNote += '<button data-art="'+key+'" class="plus6 btn btn-info">+ </button>';
+                outNote+='</div>';
+                outNote += '<br>'
+                outNote += '<p class="text-center"> Итоговая цена за товар: '
                 sum += cart6[key] * products[key]['price'];
-                out+=cart6[key] * products[key]['price'];
-                out += '</p>'
-                out+='</div>';
+                outNote+=cart6[key] * products[key]['price'];
+                outNote += '</p>'
+                outNote+='</div>';
             }
             for (var key in cart7){
-                out += '<div style="border: 2px #ff8000 solid; width: 408px">'
-                out += '<button data-art="'+key+'" class="delete7 btn btn-danger">x </button>';
-                out += '<div class="img_">';
-                out+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
-                out+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
-                out+='</div>';
-                out += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
-                out+='</div>';
-                out += '<br>'
-                out +='<div class="d-block mx-auto text-center">'
-                out += '<button data-art="'+key+'" class="minus7 btn btn-info">- </button>';
-                out+=cart7[key];
-                out += '<button data-art="'+key+'" class="plus7 btn btn-info">+ </button>';
-                out+='</div>';
-                out += '<br>'
-                out += '<p class="text-center"> Итоговая цена за товар: '
+                outNote+= '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outNote += '<button data-art="'+key+'" class="delete7 btn btn-danger">x </button>';
+                outNote += '<div class="img_">';
+                outNote+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
+                outNote+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
+                outNote+='</div>';
+                outNote+= '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
+                outNote+='</div>';
+                outNote += '<br>'
+                outNote +='<div class="d-block mx-auto text-center">'
+                outNote += '<button data-art="'+key+'" class="minus7 btn btn-info">- </button>';
+                outNote+=cart7[key];
+                outNote += '<button data-art="'+key+'" class="plus7 btn btn-info">+ </button>';
+                outNote+='</div>';
+                outNote += '<br>'
+                outNote += '<p class="text-center"> Итоговая цена за товар: '
                 sum += cart7[key] * products[key]['price'];
-                out+=cart7[key] * products[key]['price'];
-                out += '</p>'
-                out+='</div>';
+                outNote+=cart7[key] * products[key]['price'];
+                outNote += '</p>'
+                outNote+='</div>';
             }
             for (var key in cart8){
-                out += '<div style="border: 2px #ff8000 solid; width: 408px">'
-                out += '<button data-art="'+key+'" class="delete8 btn btn-danger">x </button>';
-                out += '<div class="img_">';
-                out+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
-                out+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
-                out+='</div>';
-                out += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
-                out+='</div>';
-                out += '<br>'
-                out +='<div class="d-block mx-auto text-center">'
-                out += '<button data-art="'+key+'" class="minus8 btn btn-info">- </button>';
-                out+=cart8[key];
-                out += '<button data-art="'+key+'" class="plus8 btn btn-info">+ </button>';
-                out+='</div>';
-                out += '<br>'
-                out += '<p class="text-center"> Итоговая цена за товар: '
+                outNote += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outNote += '<button data-art="'+key+'" class="delete8 btn btn-danger">x </button>';
+                outNote += '<div class="img_">';
+                outNote+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
+                outNote+='<img class="img-thumbnail post-itm" src="'+products[key]['img']+'"style="height: 220px;">';
+                outNote+='</div>';
+                outNote += '<a class="text-center" href="#" style="padding-bottom: 20px">'+products[key]['name']+'</a>';
+                outNote+='</div>';
+                outNote += '<br>'
+                outNote +='<div class="d-block mx-auto text-center">'
+                outNote += '<button data-art="'+key+'" class="minus8 btn btn-info">- </button>';
+                outNote+=cart8[key];
+                outNote += '<button data-art="'+key+'" class="plus8 btn btn-info">+ </button>';
+                outNote+='</div>';
+                outNote += '<br>'
+                outNote += '<p class="text-center"> Итоговая цена за товар: '
                 sum += cart8[key] * products[key]['price'];
-                out+=cart8[key] * products[key]['price'];
-                out += '</p>'
-                out+='</div>';
+                outNote+=cart8[key] * products[key]['price'];
+                outNote += '</p>'
+                outNote+='</div>';
             }
+            out +='<br>';
             out +='<h2 class="text-center">Итоговая сумма: '+sum+'</h2>';
+            out +='<div class="form-row text-center">'
+            out +='<button class="text-center btn btn-primary"> Оформить заказ </button>';
+            out +='</div>'
         }
 
+        $('#cartSmarphon').html(outSmarphon);
+        $('#cartPK').html(outPK);
+        $('#cartNote').html(outNote);
         $('#cart').html(out);
         $('button.plus').on('click', plusProduct);
         $('button.minus').on('click', minusProduct);

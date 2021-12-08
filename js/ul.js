@@ -1,5 +1,6 @@
 
 var cart = {};
+var cartComp = {};
 
 $('document').ready(function (){
     loadProduct();
@@ -15,11 +16,13 @@ function loadProduct(){
             out+='</div>';
             out += '<a className="text-center" href="#" style="padding-bottom: 20px">'+data[key]['name']+'</a>';
             out += '<a> Цена: '+data[key]['price']+'</a>';
-            out += '<button data-art="'+key+'" class="add btn btn-info btn-sm ">Добавить в корзину </button>';
+            out += '<button data-art="'+key+'" class="add btn btn-info btn-sm ">Добавить в корзину </button> <br>';
+            out += '<button data-art="'+key+'" class="addComp btn btn-info btn-sm ">Добавить для сравнения </button>';
             out+='</div>';
         }
         $('#product').html(out);
         $('button.add').on('click', addToCart);
+        $('button.addComp').on('click', addToComp);
     });
 }
 
@@ -31,4 +34,14 @@ function addToCart(){
         cart[id] = 1;
     }
     localStorage.setItem('cart6', JSON.stringify(cart));
+}
+
+function addToComp(){
+    var id = $(this).attr('data-art');
+    if(cartComp[id] != undefined){
+        cartComp[id] += 1;
+    }else{
+        cartComp[id] = 1;
+    }
+    localStorage.setItem('cartComp6', JSON.stringify(cartComp));
 }

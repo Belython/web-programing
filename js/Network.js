@@ -6,27 +6,7 @@ if (inLK) {
 }
 
 function addLK(){
-    if (!inLK) {
-        document.getElementById('loadNameButton').remove();
-        document.getElementById('reg').remove();
-        var out = '';
-        out += '<li class="nav-item">';
-        out += '<a href="pages/Buy.html" class="nav-link" data-id-nav="Buy">Корзина</a>';
-        out += '</li>';
-        out += '<li class="nav-item">';
-        out += '<a href="pages/delivery.html" class="nav-link" data-id-nav="Delivery">Доставка</a>';
-        out += '</li>';
-        out += '<li class="nav-item">';
-        out += '<a href="pages/Shops.html" class="nav-link" data-id-nav="Shops">Магазины</a>';
-        out += '</li>';
-        out += '<li class="nav-item">';
-        out += '<a href="pages/Form.html" class="nav-link">Комментарии</a>';
-        out += '</li>';
-        out += '<li class="nav-item">';
-        out += '<a href="pages/lk.html" class="nav-link">Личный кабинет</a>';
-        out += '</li>';
-        $('#addLK').html(out);
-    }
+
 
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
@@ -36,6 +16,7 @@ function addLK(){
             out += '<p> ⚠ Что-то пошло не так</p>';
             $('#loadName').html(out)
         });
+    document.getElementById('preloader').remove();
 }
 
 
@@ -43,18 +24,37 @@ function loadJSON(data){
     if (!inLK) {
         document.getElementById('preloader').remove();;
     }
-    var out = '';
-    //console.log(count);
-    data.forEach(function(obj){
-            if( obj.id > 5) {
-                out += '<p class="alert alert-primary">Имя: ' + obj.name + '</p>';
-                out += '<p class="alert alert-primary">Email: : ' + obj.email + '</p>';
-                out += '<p class="alert alert-primary">ID: ' + obj.id + '</p>';
-            } else {
-                out += '<p class="alert alert-primary">Имя: ' + obj.name + '</p>';
-                out += '<p class="alert alert-primary">Email: : ' + obj.email + '</p>';
-                out += '<p class="alert alert-primary">ID: ' + obj.id + '</p>';
+    let randomFor;
+    let randomTo;
+    if (sessionStorage.getItem('rand') === '1') {
+        randomFor = 4;
+        randomTo = data.length;
+        if (randomFor > data.length) {
+            randomFor = data.length;
+        }
+        sessionStorage.removeItem('rand')
+    } else {
+        if (sessionStorage.getItem('rand') == null) {
+            sessionStorage.setItem('rand', '1');
+            randomFor = 0;
+            randomTo = data.length - 5;
+            if (randomTo > data.length || randomTo < 0) {
+                randomTo = data.length;
             }
-    });
-    $('#lk').html(out)
+        }
+    }
+    let lk_field = document.getElementById('LK');
+    let out = '';
+    for (let item = randomFor; item < randomTo; item++) {
+        out += '<p class="alert alert-primary">ID: ' + data[item].id + '</p>';
+        out += '<p class="alert alert-primary">Username: ' + data[item].username + '</p>';
+        out += '<p class="alert alert-primary">Email: : ' + data[item].email + '</p>';
+        out += '<p class="alert alert-primary">Address: city: ' + data[item].address.city +
+            '; street: ' + data[item].address.street + '</p>';
+        out += '<p class="alert alert-primary">Website: : ' + data[item].website + '</p>';
+        out += '<p class="alert alert-primary">Phone: ' + data[item].phone + '</p>';
+        out += '<p class="alert alert-primary">Company: : ' + data[item].company.name + '</p>';
+    }
+    lk_field.innerHTML = out;
+    $('#LK').html(out)
 }
