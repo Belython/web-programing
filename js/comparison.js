@@ -100,7 +100,7 @@ $.getJSON('../JSON/product.json', function (data){
                 outSmarphon+='</div>';
             }
             for (var key in cartComp3){
-                outPK += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outPK += '<div class="product" data_price="'+products[key]['price']+'" style="border: 2px #ff8000 solid; width: 408px">'
                 outPK += '<button data-art="'+key+'" class="delete3 btn btn-danger">x </button>';
                 outPK += '<div class="img_">';
                 outPK+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
@@ -120,7 +120,7 @@ $.getJSON('../JSON/product.json', function (data){
                 outPK+='</div>';
             }
             for (var key in cartComp4){
-                outPK += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outPK += '<div class="product" data_price="'+products[key]['price']+'" style="border: 2px #ff8000 solid; width: 408px">'
                 outPK += '<button data-art="'+key+'" class="delete4 btn btn-danger">x </button>';
                 outPK += '<div class="img_">';
                 outPK+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
@@ -140,7 +140,7 @@ $.getJSON('../JSON/product.json', function (data){
                 outPK+='</div>';
             }
             for (var key in cartComp5){
-                outPK += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outPK += '<div class="product" data_price="'+products[key]['price']+'" style="border: 2px #ff8000 solid; width: 408px">'
                 outPK += '<button data-art="'+key+'" class="delete5 btn btn-danger">x </button>';
                 outPK += '<div class="img_">';
                 outPK+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
@@ -160,7 +160,7 @@ $.getJSON('../JSON/product.json', function (data){
                 outPK+='</div>';
             }
             for (var key in cartComp6){
-                outNote += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outNote += '<div class="product" data_price="'+products[key]['price']+'" style="border: 2px #ff8000 solid; width: 408px">'
                 outNote += '<button data-art="'+key+'" class="delete6 btn btn-danger">x </button>';
                 outNote += '<div class="img_">';
                 outNote+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
@@ -180,7 +180,7 @@ $.getJSON('../JSON/product.json', function (data){
                 outNote+='</div>';
             }
             for (var key in cartComp7){
-                outNote += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outNote += '<div class="product" data_price="'+products[key]['price']+'" style="border: 2px #ff8000 solid; width: 408px">'
                 outNote += '<button data-art="'+key+'" class="delete7 btn btn-danger">x </button>';
                 outNote += '<div class="img_">';
                 outNote+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';
@@ -200,7 +200,7 @@ $.getJSON('../JSON/product.json', function (data){
                 outNote+='</div>';
             }
             for (var key in cartComp8){
-                outNote += '<div style="border: 2px #ff8000 solid; width: 408px">'
+                outNote += '<div class="product" data_price="'+products[key]['price']+'" style="border: 2px #ff8000 solid; width: 408px">'
                 outNote += '<button data-art="'+key+'" class="delete8 btn btn-danger">x </button>';
                 outNote += '<div class="img_">';
                 outNote+= '<div style="display: flex; justify-content: space-around; align-items: center; height: 100%">';

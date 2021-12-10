@@ -231,7 +231,7 @@ $.getJSON('../JSON/product.json', function (data){
             out +='<br>';
             out +='<h2 class="text-center">Итоговая сумма: '+sum+'</h2>';
             out +='<div class="form-row text-center">'
-            out +='<button class="text-center btn btn-primary"> Оформить заказ </button>';
+            out +='<button class="text-center btn btn-primary" onclick="window.location=\'order.html\'"> Оформить заказ </button>';
             out +='</div>'
         }
 

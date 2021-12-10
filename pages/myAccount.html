@@ -5,7 +5,7 @@
     <meta name ="description" content="Лучшие магазин электроники на всё СНГ пространстве. Здесь вы найдёте такие вещи, как смартфоны, комплектующие для ПК и много другое." />
     <meta name ="keywords" content="интернет магазин, электроника, реклама, смартфоны" />
     <link rel="icon" type="img/png" href="../photos/programmer.png">
-    <title>Сравнение товаров</title>
+    <title>Личный кабинет</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <script src="../js/script.js"></script>
@@ -153,29 +153,59 @@
     </div>
 </div>
 <main>
-    <h3 class="text-center my-5">Товары для сравнения</h3>
-    <div class="container" id="del">
-        <h3 class="text-center my-5" id="delS">Смартфоны</h3>
-        <button class="btn btn-success compS" id="sort-ascS">Цена по возрастанию</button>
-        <button class="btn btn-success compSd" id="sort-descS">Цена по убыванию</button>
-        <div class="row cartSmarphon" id="cartSmarphon">
+    <div class="container-fluid">
+        <div class="row">
+            <header class="col-md-3">
+                <nav class="sidebar-sticky navbar-expand-md ">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
+                    <div class="collapse navbar-collapse text-left m-5" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto flex-column">
+                            <li class="nav-item active">
+                                <a class="h3 pb-4 nav-link "  href="myAccount.html">Мой профиль</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="h3 pt-4 nav-link" href="allorder.html">Мои заказы</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <main class="col-md-5">
+                <h1 class="p-3 text-center">Профиль</h1>
+                <div class="text-left">
+                    <h3 class="p-3 text-center">Ваши персональные данные</h3>
+                    <img class="rounded float-start" src="../photos/profile.jpg">
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <td colspan="1">ФИО</td>
+                            <td>Яна Цист</td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">Email</td>
+                            <td>www@mail.ru</td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">Телефон</td>
+                            <td>+714881377</td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">Город</td>
+                            <td>Санкт-Петербург</td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">Дата рождения</td>
+                            <td>Секретно</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
         </div>
-        <h3 class="text-center my-5" id="delP">Комплектующие для ПК</h3>
-        <button class="btn btn-success compP" id="sort-asPc">Цена по возрастанию</button>
-        <button class="btn btn-success compPd" id="sort-descP">Цена по убыванию</button>
-        <div class="row cartPK" id="cartPK">
-
-        </div>
-        <h3 class="text-center my-5" id="delN">Ноутбуки</h3>
-        <button class="btn btn-success compN" id="sort-ascN">Цена по возрастанию</button>
-        <button class="btn btn-success compNd" id="sort-descN">Цена по убыванию</button>
-        <div class="row cartNote" id="cartNote">
-
-        </div>
-    </div>
-    <div id="cart">
-
     </div>
 </main>
 <footer>
@@ -223,8 +253,5 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/registration.js"></script>
 <script src="../js/search.js"></script>
-<script src="../js/comparison.js"></script>
-<script src="../js/sort.js"></script>
-
-</body<script src="../js/pushPhone.js"></script>>
+</body>
 </html>

@@ -9,9 +9,10 @@ if (localStorage.getItem('login') != null) {
         ' href="#" id="lkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">'
         + user.Name + " " + user.SecondName +
         '</a><ul class="dropdown-menu" aria-labelledby="lkDropdownMenuLink"><li>' +
-        '<a class="dropdown-item" href="lk.html" id="lk">Личный кабинет</a></li>' +
+        '<a class="dropdown-item" href="myAccount.html" id="lk">Личный кабинет</a></li>' +
         '<a class="dropdown-item" href="comparison.html" id="lk">Сравнение товаров</a></li>' +
-        '<a class="dropdown-item" id="exit">Выйти</a></li></ul></li>';
+        '<a class="dropdown-item" id="exit">Выйти</a></li>' +
+        '<a class="dropdown-item" href="lk.html" id="lk">Личный кабинет(старое)</a></li></ul></li>';
     modal_user.innerHTML = out;
 }
 
@@ -65,9 +66,10 @@ document.getElementById("login").addEventListener('click', function (event) {
                     ' href="#" id="lkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">'
                     + appointments[item].Name +
                     '</a><ul class="dropdown-menu" aria-labelledby="lkDropdownMenuLink"><li>' +
-                    '<a class="dropdown-item" href="lk.html" id="lk">Личный кабинет</a></li>' +
+                    '<a class="dropdown-item" href="myAccount.html" id="lk">Личный кабинет</a></li>' +
                     '<a class="dropdown-item" href="comparison.html" id="lk">Сравнение товаров</a></li>' +
-                    '<a class="dropdown-item" id="exit">Выйти</a></li></ul></li>';
+                    '<a class="dropdown-item" id="exit">Выйти</a></li></ul></li>' +
+                    '<a class="dropdown-item" href="lk.html" id="lk">Личный кабинет(старое)</a></li></ul></li>';
             }
             break;
         }
