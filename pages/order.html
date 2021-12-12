@@ -47,35 +47,11 @@
       <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-primary">Корзина</span>
-          <span class="badge bg-primary rounded-pill">3</span>
+          <span class="badge bg-primary rounded-pill" id="countCart">3</span>
         </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Телефон</h6>
-              <small class="text-muted">РУССКИЙ ТЕЛЕФОН</small>
-            </div>
-            <span class="text-muted">1200 руб</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Видеокарта</h6>
-              <small class="text-muted">РУССКАЯ ВИДЕОКАРТА</small>
-            </div>
-            <span class="text-muted">14881377 руб</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Ноутбук</h6>
-              <small class="text-muted">РУССКИЙ НОУТБУК</small>
-            </div>
-            <span class="text-muted">3000 руб</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span>Всего</span>
-            <strong>БЕСПЛАТНО, сегодня оплачивает ВВП</strong>
-          </li>
-        </ul>
+        <div id="cart">
+
+        </div>
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Личные данные</h4>
@@ -106,36 +82,14 @@
             </div>
 
             <div class="col-12">
-              <label for="address" class="form-label">Адрес</label>
-              <input type="text" class="form-control" id="address" placeholder="улица Пушкина дом Калотушкина" required>
+              <label for="number" class="form-label">Телефон <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" id="number" placeholder="+71488137722">
               <div class="invalid-feedback">
-                Please enter your shipping address.
+                Please enter a valid email address for shipping updates.
               </div>
             </div>
 
-            <div class="col-md-5">
-              <label for="country" class="form-label">Страна</label>
-              <select class="form-select" id="country" required>
-                <option value="">Выберите</option>
-                <option>РОССИЙСКАЯ ФЕДЕРАЦИЯ(УРА! УРА! УРА!)</option>
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid country.
-              </div>
-            </div>
 
-            <div class="col-md-4">
-              <label for="state" class="form-label">Город</label>
-              <select class="form-select" id="state" required>
-                <option value="">Выберите</option>
-                <option>Санкт-Петербург</option>
-                <option>москва</option>
-                <option>КРЫЖОПОЛЬ</option>
-              </select>
-              <div class="invalid-feedback">
-                Please provide a valid state.
-              </div>
-            </div>
 
 
           <hr class="my-4">
@@ -152,11 +106,27 @@
 
           <hr class="my-4">
 
+          <h4 class="mb-3">Доставка</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="selfdelivery" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="credit">Самовывоз</label>
+            </div>
+            <div class="form-check">
+              <input id="delivery" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="debit">Курьер</label>
+            </div>
+          </div>
+          <div id="addDelivery">
+
+          </div>
+
           <h4 class="mb-3">Оплата</h4>
 
           <div class="my-3">
             <div class="form-check">
-              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" required>
               <label class="form-check-label" for="credit">Кредитная карта</label>
             </div>
             <div class="form-check">
@@ -164,46 +134,22 @@
               <label class="form-check-label" for="debit">Наличные</label>
             </div>
           </div>
+          <div id="chekout">
 
-          <div class="row gy-3">
-
-            <div class="col-md-6">
-              <label for="cc-number" class="form-label">Номер карты</label>
-              <input type="text" class="form-control" id="cc-number" placeholder="" required>
-              <div class="invalid-feedback">
-                Credit card number is required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-expiration" class="form-label">Срок действия</label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-              <div class="invalid-feedback">
-                Expiration date required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-cvv" class="form-label">CVV</label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-              <div class="invalid-feedback">
-                Security code required
-              </div>
-            </div>
           </div>
+
           </div>
 
           <hr class="my-4">
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Оформить заказ</button>
         </form>
+        <button class="w-100 btn btn-primary btn-lg" id="orderss" onclick="window.location='index.html' ">Оформить заказ</button>
       </div>
     </div>
   </main>
 </div>
-
-
-    <script src="../js/bootstrap.bundle.js"></script>
-
       <script src="../js/form-validation.js"></script>
+      <script src="../js/bootstrap.js"></script>
+      <script src="../js/jquery.min.js"></script>
+      <script src="../js/order.js"></script>
   </body>
 </html>

@@ -31,6 +31,9 @@ document.getElementById("reg").addEventListener('click', function (event) {
         SecondName: document.getElementById('inputSecondNameReg').value,
         Email: document.getElementById('inputEmailReg').value,
         Password: document.getElementById('inputPasswordReg').value,
+        DateBiethday: document.getElementById('date').value,
+        City: document.getElementById('city').value,
+        NumberPhone: document.getElementById('number').value,
     }
 
     if (localStorage.getItem("users") !== null) {
@@ -54,7 +57,11 @@ document.getElementById("login").addEventListener('click', function (event) {
             } else {
                 let login = {
                     Name: appointments[item].Name,
-                    SecondName: appointments[item].SecondName
+                    SecondName: appointments[item].SecondName,
+                    Email: appointments[item].Email,
+                    DateBiethday: appointments[item].DateBiethday,
+                    City: appointments[item].City,
+                    NumberPhone: appointments[item].NumberPhone,
                 };
                 localStorage.setItem("login", JSON.stringify(login));
                 console.log('верный пароль');
