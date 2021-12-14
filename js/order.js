@@ -44,55 +44,55 @@ $.getJSON('../JSON/product.json', function (data){
         out += products[key]['name'] + " - " + cart[key] + '<br>';
         sum += cart[key] * products[key]['price'];
         count += cart[key];
-        carts.push(products[key]) ;
+        carts.push(products[key], cart[key]);
       }
       for (var key in cart1){
         out += products[key]['name'] + " - " + cart1[key] + '<br>';
         sum += cart1[key] * products[key]['price'];
         count += cart1[key];
-        carts.push(products[key]) ;
+        carts.push(products[key], cart1[key]) ;
       }
       for (var key in cart2){
         out += products[key]['name'] + " - " + cart2[key] + '<br>';
         sum += cart2[key] * products[key]['price'];
         count += cart2[key];
-        carts.push(products[key]) ;
+        carts.push(products[key], cart2[key]) ;
       }
       for (var key in cart3){
         out += products[key]['name'] + " - " + cart3[key] + '<br>';
         sum += cart3[key] * products[key]['price'];
         count += cart3[key];
-        carts.push(products[key]) ;
+        carts.push(products[key], cart3[key]) ;
       }
       for (var key in cart4){
         out += products[key]['name'] + " - " + cart4[key] + '<br>';
         sum += cart4[key] * products[key]['price'];
         count += cart4[key];
-        carts.push(products[key]) ;
+        carts.push(products[key], cart4[key]) ;
       }
       for (var key in cart5){
         out += products[key]['name'] + " - " + cart5[key] + '<br>';
         sum += cart5[key] * products[key]['price'];
         count += cart5[key];
-        carts.push(products[key]) ;
+        carts.push(products[key], cart5[key]) ;
       }
       for (var key in cart6){
         out += products[key]['name'] + " - " + cart6[key] + '<br>';
         sum += cart6[key] * products[key]['price'];
         count += cart6[key];
-        carts.push(products[key]) ;
+        carts.push(products[key], cart6[key]) ;
       }
       for (var key in cart7){
         out += products[key]['name'] + " - " + cart7[key] + '<br>';
         sum += cart7[key] * products[key]['price'];
         count += cart7[key];
-        carts.push(products[key]) ;
+        carts.push(products[key], cart7[key]) ;
       }
       for (var key in cart8){
         out += products[key]['name'] + " - " + cart8[key] + '<br>';
         sum += cart8[key] * products[key]['price'];
         count += cart8[key];
-        carts.push(products[key]) ;
+        carts.push(products[key], cart8[key]) ;
       }
       out +='<br>';
       out +='<h5 class="text-center">Итоговая сумма: '+sum+'</h5>';
@@ -136,7 +136,6 @@ function checkCart(){
 
 var isPayment = new Boolean(false);
 var isDelivery = new Boolean(false);
-var del ='';
 
 document.getElementById("delivery").addEventListener('click', function (event) {
     let out ='';
@@ -172,8 +171,7 @@ document.getElementById("delivery").addEventListener('click', function (event) {
         '              </div>\n' +
         '            </div>';
     $('#addDelivery').html(out);
-    isDelivery = false;
-    del = document.getElementById('address').value;
+    isDelivery = true;
 });
 
   document.getElementById("selfdelivery").addEventListener('click', function (event) {
@@ -192,8 +190,7 @@ document.getElementById("delivery").addEventListener('click', function (event) {
       '              </div>\n' +
       '            </div>';
   $('#addDelivery').html(out);
-  isDelivery = true;
-  del = document.getElementById('shop').value;
+  isDelivery = false;
 });
 
 document.getElementById("credit").addEventListener('click', function (event) {
@@ -237,7 +234,15 @@ document.getElementById("debit").addEventListener('click', function (event) {
 
 
 document.getElementById("orderss").addEventListener('click', function (event) {
-  let orders =[];
+  let orders =[]
+  var del ='';
+  if(isDelivery == true){
+    del += document.getElementById('country').value + " ";
+    del += document.getElementById('state').value + " ";
+    del += document.getElementById('address').value;
+  } else{
+    del = document.getElementById('shop').value;
+  }
   if(localStorage.getItem('order') != null){
     orders = JSON.parse(localStorage.getItem('order'));
   }

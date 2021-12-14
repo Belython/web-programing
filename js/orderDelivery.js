@@ -5,7 +5,11 @@ if (localStorage.getItem('order') != null) {
         for (let item in orders) {
             var products = [];
             for (let key in orders[item].Carts) {
-                products += orders[item].Carts[key]['name'] + '<br>';
+                if ( key % 2 == 0) {
+                    products += orders[item].Carts[key]['name'];
+                }else{
+                    products += '  Количество - ' + orders[item].Carts[key] + '<br>';
+                }
             }
             let chekout = '';
             if(orders[item].Payment == true)
@@ -22,7 +26,7 @@ if (localStorage.getItem('order') != null) {
                     '                        <tbody>\n' +
                     '                        <tr>\n' +
                     '                            <td colspan="1">ФИО получателя</td>\n' +
-                    '                            <td id="dateBirhday">' + orders[item].name + " " + orders[item].SecondName + '</td>\n' +
+                    '                            <td id="dateBirhday">' + orders[item].Name + " " + orders[item].SecondName + '</td>\n' +
                     '                        </tr>\n' +
                     '                        <tr>\n' +
                     '                            <td colspan="1">Номер получателя</td>\n' +
@@ -30,7 +34,7 @@ if (localStorage.getItem('order') != null) {
                     '                        </tr>\n' +
                     '                        <tr>\n' +
                     '                            <td colspan="1">Адресс получателя</td>\n' +
-                    '                            <td id="dateBirhday">' + 'э' + '</td>\n' +
+                    '                            <td id="dateBirhday">' + orders[item].Delivery + '</td>\n' +
                     '                        </tr>\n' +
                     '                        <tr>\n' +
                     '                            <td colspan="1">Статус оплаты</td>\n' +

@@ -5,7 +5,11 @@ if (localStorage.getItem('order') != null) {
         for (let item in orders) {
             var products = [];
             for (let key in orders[item].Carts) {
-                products += orders[item].Carts[key]['name'] + '<br>';
+                if ( key % 2 == 0) {
+                    products += orders[item].Carts[key]['name'];
+                }else{
+                    products += '  Количество - ' + orders[item].Carts[key] + '<br>';
+                }
             }
             out += ' <div class="text-left">\n' +
                 '                    <h3 class="p-3 text-center">Номер заказа:'+item+'</h3>\n' +
