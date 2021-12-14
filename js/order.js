@@ -50,57 +50,49 @@ $.getJSON('../JSON/product.json', function (data){
         out += products[key]['name'] + " - " + cart1[key] + '<br>';
         sum += cart1[key] * products[key]['price'];
         count += cart1[key];
-        carts.push(products[key]['name']) ;
-        carts.push(products[key]['img']);
+        carts.push(products[key]) ;
       }
       for (var key in cart2){
         out += products[key]['name'] + " - " + cart2[key] + '<br>';
         sum += cart2[key] * products[key]['price'];
         count += cart2[key];
-        carts.push(products[key]['name']) ;
-        carts.push(products[key]['img']);
+        carts.push(products[key]) ;
       }
       for (var key in cart3){
         out += products[key]['name'] + " - " + cart3[key] + '<br>';
         sum += cart3[key] * products[key]['price'];
         count += cart3[key];
-        carts.push(products[key]['name']) ;
-        carts.push(products[key]['img']);
+        carts.push(products[key]) ;
       }
       for (var key in cart4){
         out += products[key]['name'] + " - " + cart4[key] + '<br>';
         sum += cart4[key] * products[key]['price'];
         count += cart4[key];
-        carts.push(products[key]['name']) ;
-        carts.push(products[key]['img']);
+        carts.push(products[key]) ;
       }
       for (var key in cart5){
         out += products[key]['name'] + " - " + cart5[key] + '<br>';
         sum += cart5[key] * products[key]['price'];
         count += cart5[key];
-        carts.push(products[key]['name']) ;
-        carts.push(products[key]['img']);
+        carts.push(products[key]) ;
       }
       for (var key in cart6){
         out += products[key]['name'] + " - " + cart6[key] + '<br>';
         sum += cart6[key] * products[key]['price'];
         count += cart6[key];
-        carts.push(products[key]['name']) ;
-        carts.push(products[key]['img']);
+        carts.push(products[key]) ;
       }
       for (var key in cart7){
         out += products[key]['name'] + " - " + cart7[key] + '<br>';
         sum += cart7[key] * products[key]['price'];
         count += cart7[key];
-        carts.push(products[key]['name']) ;
-        carts.push(products[key]['img']);
+        carts.push(products[key]) ;
       }
       for (var key in cart8){
         out += products[key]['name'] + " - " + cart8[key] + '<br>';
         sum += cart8[key] * products[key]['price'];
         count += cart8[key];
-        carts.push(products[key]['name']) ;
-        carts.push(products[key]['img']);
+        carts.push(products[key]) ;
       }
       out +='<br>';
       out +='<h5 class="text-center">Итоговая сумма: '+sum+'</h5>';
