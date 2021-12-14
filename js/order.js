@@ -29,6 +29,7 @@ var cart6 = [];
 var cart7 = [];
 var cart8 = [];
 var carts =[];
+var Summ = '';
 
 $.getJSON('../JSON/product.json', function (data){
   var products = data;
@@ -43,8 +44,7 @@ $.getJSON('../JSON/product.json', function (data){
         out += products[key]['name'] + " - " + cart[key] + '<br>';
         sum += cart[key] * products[key]['price'];
         count += cart[key];
-        carts.push(products[key]['name']) ;
-        carts.push(products[key]['img']);
+        carts.push(products[key]) ;
       }
       for (var key in cart1){
         out += products[key]['name'] + " - " + cart1[key] + '<br>';
@@ -106,9 +106,9 @@ $.getJSON('../JSON/product.json', function (data){
       out +='<h5 class="text-center">Итоговая сумма: '+sum+'</h5>';
       var outCount ='';
       outCount = '<span class="badge bg-primary rounded-pill" id="countCart">'+count+'</span>';
+      Summ = sum;
       $('#cart').html(out);
     $('#countCart').html(outCount);
-    console.log(carts);
     }
 });
 
@@ -143,6 +143,7 @@ function checkCart(){
 }
 
 var isPayment = new Boolean(false);
+var isDelivery = new Boolean(false);
 var del ='';
 
 document.getElementById("delivery").addEventListener('click', function (event) {
@@ -179,6 +180,8 @@ document.getElementById("delivery").addEventListener('click', function (event) {
         '              </div>\n' +
         '            </div>';
     $('#addDelivery').html(out);
+    isDelivery = false;
+    del = document.getElementById('address').value;
 });
 
   document.getElementById("selfdelivery").addEventListener('click', function (event) {
@@ -197,6 +200,8 @@ document.getElementById("delivery").addEventListener('click', function (event) {
       '              </div>\n' +
       '            </div>';
   $('#addDelivery').html(out);
+  isDelivery = true;
+  del = document.getElementById('shop').value;
 });
 
 document.getElementById("credit").addEventListener('click', function (event) {
@@ -238,15 +243,13 @@ document.getElementById("debit").addEventListener('click', function (event) {
   isPayment = false;
 });
 
-if(	$("#selfdelivery").prop("checked") )
-{
-  del = document.getElementById('shop').value;
-} else if (	$("#delivery").prop("checked") ){
-  del = document.getElementById('address').value;
-}
 
-let a = [];
 document.getElementById("orderss").addEventListener('click', function (event) {
+  let orders =[];
+  if(localStorage.getItem('order') != null){
+    orders = JSON.parse(localStorage.getItem('order'));
+  }
+  let login = JSON.parse(localStorage.getItem('login'));
   let order = {
     Name: document.getElementById('firstName').value,
     SecondName: document.getElementById('lastName').value,
@@ -255,7 +258,10 @@ document.getElementById("orderss").addEventListener('click', function (event) {
     Delivery:  del,
     Payment: isPayment,
     Carts: carts,
+    Login: login.Email,
+    IsDelivery: isDelivery,
+    Sum: Summ,
   }
-  a.push(order);
-  localStorage.setItem("order", JSON.stringify(a));
+  orders.push(order);
+  localStorage.setItem("order", JSON.stringify(orders));
 });

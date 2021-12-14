@@ -5,7 +5,7 @@
     <meta name ="description" content="Лучшие магазин электроники на всё СНГ пространстве. Здесь вы найдёте такие вещи, как смартфоны, комплектующие для ПК и много другое." />
     <meta name ="keywords" content="интернет магазин, электроника, реклама, смартфоны" />
     <link rel="icon" type="img/png" href="../photos/programmer.png">
-    <title>Корзина</title>
+    <title>Заказы для кладовщиков</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <script src="../js/script.js"></script>
@@ -15,7 +15,7 @@
         }
     </style>
 </head>
-<body data-id-page="Buy">
+<body>
 <nav class="navbar navbar-expand-xl navbar-light" style="background-color: #ff8000;">
     <div class="container">
         <a href="index.html" class="navbar-brand">Электроника от Великодного Александра</a>
@@ -58,7 +58,6 @@
                 </li>
             </ul>
         </div>
-        <script>shineLinks("navbarContent")</script>
     </div>
 </nav>
 <div class="modal fade" id="authorization" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -166,26 +165,41 @@
     </div>
 </div>
 <main>
+    <div class="container-fluid">
+        <div class="row">
+            <header class="col-md-3">
+                <nav class="sidebar-sticky navbar-expand-md ">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-    <h3 class="text-center my-5">Корзина</h3>
-    <div class="container" id="del">
-        <h3 class="text-center my-5" id="delS">Смартфоны</h3>
-        <div class="row" id="cartSmarphon">
+                    <div class="collapse navbar-collapse text-left m-5" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto flex-column">
+                            <li class="nav-item active">
+                                <a class="h3 pb-4 nav-link "  href="myAccount.html">Мой профиль</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="h3 pt-4 nav-link" href="allorder.html">Мои заказы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="h3 pt-4 nav-link" href="orderShopkipper.html">Все заказы(кладовщиков)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="h3 pt-4 nav-link" href="orderDelivery.html">Все заказы(доставщиков)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
 
-        </div>
-        <h3 class="text-center my-5" id="delP">Комплектующие для ПК</h3>
-        <div class="row" id="cartPK">
+            <main class="col-md-5">
+                <h1 class="p-3 text-center">Заказы, которые нужно собрать</h1>
+                <div id ="orders">
 
-        </div>
-        <h3 class="text-center my-5" id="delN">Ноутбуки</h3>
-        <div class="row" id="cartNote">
-
+                </div>
+            </main>
         </div>
     </div>
-    <div id="cart">
-
-    </div>
-
 </main>
 <footer>
     <br>
@@ -230,8 +244,8 @@
 </footer>
 <script src="../js/bootstrap.js"></script>
 <script src="../js/jquery.min.js"></script>
-<script src="../js/cart.js"></script>
 <script src="../js/registration.js"></script>
 <script src="../js/search.js"></script>
+<script src="../js/orderShopkipper.js"></script>
 </body>
 </html>

@@ -423,6 +423,33 @@ function checkCart(){
     if(localStorage.getItem('cartComp8') != null){
         cartComp8 = JSON.parse(localStorage.getItem('cartComp8'));
     }
+    if(localStorage.getItem('cart') != null){
+        cart = JSON.parse(localStorage.getItem('cart'));
+    }
+    if(localStorage.getItem('cart1') != null){
+        cart1 = JSON.parse(localStorage.getItem('cart1'));
+    }
+    if(localStorage.getItem('cart2') != null){
+        cart2 = JSON.parse(localStorage.getItem('cart2'));
+    }
+    if(localStorage.getItem('cart3') != null){
+        cart3 = JSON.parse(localStorage.getItem('cart3'));
+    }
+    if(localStorage.getItem('cart4') != null){
+        cart4 = JSON.parse(localStorage.getItem('cart4'));
+    }
+    if(localStorage.getItem('cart5') != null){
+        cart5 = JSON.parse(localStorage.getItem('cart5'));
+    }
+    if(localStorage.getItem('cart6') != null){
+        cart6 = JSON.parse(localStorage.getItem('cart6'));
+    }
+    if(localStorage.getItem('cart7') != null){
+        cart7 = JSON.parse(localStorage.getItem('cart7'));
+    }
+    if(localStorage.getItem('cart8') != null){
+        cart8 = JSON.parse(localStorage.getItem('cart8'));
+    }
 }
 
 

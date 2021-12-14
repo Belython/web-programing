@@ -1,0 +1,24 @@
+if (localStorage.getItem('order') != null) {
+    let orders = JSON.parse(localStorage.getItem('order'));
+    let out = '';
+    $.getJSON('../JSON/product.json', function (data) {
+        for (let item in orders) {
+            var products = [];
+            for (let key in orders[item].Carts) {
+                products += orders[item].Carts[key]['name'] + '<br>';
+            }
+            out += ' <div class="text-left">\n' +
+                '                    <h3 class="p-3 text-center">Номер заказа:'+item+'</h3>\n' +
+                '                    <table class="table table-striped">\n' +
+                '                        <tbody>\n' +
+                '                        <tr>\n' +
+                '                            <td colspan="1">Товары</td>\n' +
+                '                            <td id="dateBirhday">'+products+'</td>\n' +
+                '                        </tr>\n' +
+                '                        </tbody>\n' +
+                '                    </table>\n' +
+                '                </div>'
+        }
+        $('#orders').html(out);
+    });
+}
