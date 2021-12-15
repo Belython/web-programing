@@ -15,7 +15,7 @@ if (localStorage.getItem('order') != null) {
                         products += '  Количество - ' + orders[item].Carts[key] + '<br>';
                     }
                 }
-                out += ' <div class="text-left">\n' +
+                out += ' <div id="delorder'+item+'" class="text-left">\n' +
                     '                    <h3 class="p-3 text-center">Номер заказа:' + item + '</h3>\n' +
                     '                    <table class="table table-striped">\n' +
                     '                        <tbody>\n' +
@@ -25,9 +25,15 @@ if (localStorage.getItem('order') != null) {
                     '                        </tr>\n' +
                     '                        </tbody>\n' +
                     '                    </table>\n' +
+                    '                        \'<button type="button" class="delete\'+item+\' text-center btn btn-primary">Заказ собран</button>\''+
                     '                </div>'
             }
         }
         $('#orders').html(out);
+        var buttons = document.getElementsByTagName("button");
+        Array.from(buttons).forEach((ele, index) => ele.addEventListener("click", function() {
+            let a = index - 6;
+            document.getElementById('delorder'+a+'').innerHTML = '';
+        }, false))
     });
 }

@@ -48,11 +48,17 @@ if (localStorage.getItem('order') != null) {
                         '                        </tr>\n' +
                         '                        </tbody>\n' +
                         '                    </table>\n' +
+                        '<button type="button" class="delete'+item+' text-center btn btn-primary">Заказ доставлен</button>'+
                         '                </div>'
                 }
             }
         }
         $('#orders').html(out);
+        var buttons = document.getElementsByTagName("button");
+        Array.from(buttons).forEach((ele, index) => ele.addEventListener("click", function() {
+            let a = index - 5;
+            document.getElementById('delorder'+a+'').innerHTML = '';
+        }, false))
     });
-
 }
+
