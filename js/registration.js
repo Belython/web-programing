@@ -26,6 +26,8 @@ document.getElementById("exit").addEventListener('click', function (event) {
 });
 
 document.getElementById("reg").addEventListener('click', function (event) {
+    let role = '';
+    Array.from(document.querySelectorAll("input[type='radio']")).forEach(x =>{if (x.checked) role = x.value});
     let user = {
         Name: document.getElementById('inputNameReg').value,
         SecondName: document.getElementById('inputSecondNameReg').value,
@@ -34,6 +36,7 @@ document.getElementById("reg").addEventListener('click', function (event) {
         DateBiethday: document.getElementById('date').value,
         City: document.getElementById('city').value,
         NumberPhone: document.getElementById('number').value,
+        Role: role,
     }
 
     if (localStorage.getItem("users") !== null) {
@@ -62,6 +65,7 @@ document.getElementById("login").addEventListener('click', function (event) {
                     DateBiethday: appointments[item].DateBiethday,
                     City: appointments[item].City,
                     NumberPhone: appointments[item].NumberPhone,
+                    Role: appointments[item].Role,
                 };
                 localStorage.setItem("login", JSON.stringify(login));
                 console.log('верный пароль');

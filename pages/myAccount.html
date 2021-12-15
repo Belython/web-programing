@@ -157,6 +157,18 @@
                         <label class="form-check-label" for="check1">Я согласен с политикой
                             конфиденциальности</label>
                     </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="user">
+                        <label class="form-check-label" for="inlineRadio1">Пользователь</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="shopkipper">
+                        <label class="form-check-label" for="inlineRadio2">Кладовщик</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="delivery">
+                        <label class="form-check-label" for="inlineRadio3">Курьер</label>
+                    </div>
                     <br>
                     <button class="btn btn-primary" id="reg">Регистрация</button>
                 </form>
@@ -178,14 +190,14 @@
                             <li class="nav-item active">
                                 <a class="h3 pb-4 nav-link "  href="myAccount.html">Мой профиль</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" id="user">
                                 <a class="h3 pt-4 nav-link" href="allorder.html">Мои заказы</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="h3 pt-4 nav-link" href="orderShopkipper.html">Все заказы(кладовщиков)</a>
+                            <li class="nav-item" id="shopkipper">
+                                <a class="h3 pt-4 nav-link" href="orderShopkipper.html">Заказы</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="h3 pt-4 nav-link" href="orderDelivery.html">Все заказы(доставщиков)</a>
+                            <li class="nav-item" id="delivery">
+                                <a class="h3 pt-4 nav-link"  href="orderDelivery.html">Заказы</a>
                             </li>
                         </ul>
                     </div>
@@ -218,6 +230,10 @@
                         <tr>
                             <td colspan="1">Дата рождения</td>
                             <td id="dateBirhday"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">Статус</td>
+                            <td id="role"></td>
                         </tr>
                         </tbody>
                     </table>

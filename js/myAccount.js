@@ -15,4 +15,18 @@ if (localStorage.getItem('login') != null) {
     let outdate = '';
     outdate += user.DateBiethday;
     document.getElementById('dateBirhday').innerHTML = outdate;
+    let outrole = '';
+    outrole += user.Role;
+    document.getElementById('role').innerHTML = outrole;
+    if (user.Role == 'delivery') {
+        document.getElementById('shopkipper').innerHTML = '';
+        document.getElementById('user').innerHTML = '';
+    }
+    if (user.Role == 'shopkipper') {
+        document.getElementById('delivery').innerHTML = '';
+        document.getElementById('user').innerHTML = '';}
+
+    if (user.Role == 'user') {
+        document.getElementById('shopkipper').innerHTML = '';
+        document.getElementById('delivery').innerHTML = '';}
 }
