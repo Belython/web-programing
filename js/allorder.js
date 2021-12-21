@@ -35,7 +35,7 @@ if (localStorage.getItem('order') != null) {
                     } else {
                         chekout = 'Неоплаченно';
                     }
-                    out += ' <div class="text-left">\n' +
+                    out += ' <div  id="delorder'+item+'" class="text-left">\n' +
                         '                    <h3 class="p-3 text-center">Номер заказа:' + item + '</h3>\n' +
                         '                    <table class="table table-striped">\n' +
                         '                        <tbody>\n' +
@@ -58,10 +58,18 @@ if (localStorage.getItem('order') != null) {
                         outTime +
                         '                        </tbody>\n' +
                         '                    </table>\n' +
+                        '<button type="button" class="delete'+item+' text-center btn btn-primary">Отменить заказ</button>'+
                         '                </div>'
                 }
             }
         }
         $('#orders').html(out);
+        var buttons = document.getElementsByTagName("button");
+        Array.from(buttons).forEach((ele, index) => ele.addEventListener("click", function() {
+            let a = index - 6;
+            orders.splice(index - 6, 1);
+            localStorage.setItem("order", JSON.stringify(orders));
+            window.location.reload();
+        }, false))
     });
 }
