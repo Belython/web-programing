@@ -199,7 +199,7 @@ document.getElementById("credit").addEventListener('click', function (event) {
       '\n' +
       '            <div class="col-md-6">\n' +
       '              <label for="cc-number" class="form-label">Номер карты</label>\n' +
-      '              <input type="text" required class="form-control" id="cc-number" placeholder="" required>\n' +
+      '              <input type="number" required class="form-control" id="cc-number" placeholder="" required>\n' +
       '              <div class="invalid-feedback">\n' +
       '                Credit card number is required\n' +
       '              </div>\n' +
@@ -207,7 +207,7 @@ document.getElementById("credit").addEventListener('click', function (event) {
       '\n' +
       '            <div class="col-md-3">\n' +
       '              <label for="cc-expiration" class="form-label">Срок действия</label>\n' +
-      '              <input type="text" required class="form-control" id="cc-expiration" placeholder="" required>\n' +
+      '              <input type="number" required class="form-control" id="cc-expiration" placeholder="" required>\n' +
       '              <div class="invalid-feedback">\n' +
       '                Expiration date required\n' +
       '              </div>\n' +
@@ -215,7 +215,7 @@ document.getElementById("credit").addEventListener('click', function (event) {
       '\n' +
       '            <div class="col-md-3">\n' +
       '              <label for="cc-cvv" class="form-label">CVV</label>\n' +
-      '              <input type="text" required class="form-control" id="cc-cvv" placeholder="" required>\n' +
+      '              <input type="number" required class="form-control" id="cc-cvv" placeholder="" required>\n' +
       '              <div class="invalid-feedback">\n' +
       '                Security code required\n' +
       '              </div>\n' +

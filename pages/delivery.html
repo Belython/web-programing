@@ -105,52 +105,46 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="">Введите имя</label>
+                        <label for="" class="form-check-label">Введите имя</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputNameReg">
+                            <input type="text" class="form-control" id="inputNameReg" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="" >Введите фамилию</label>
+                        <label for="" class="form-check-label">Введите фамилию</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputSecondNameReg">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-10">
-                            <label for="" class="form-label">Введите дату рождения</label>
-                            <input class="form-control" type="date" id="date" name="trip-start"
-                                   min="1900-01-01" max="2023-01-01">
+                            <input type="text" class="form-control" id="inputSecondNameReg" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-10">
-                            <label for="" class="form-label">Введите номер телефона</label>
-                            <input type="text" class="form-control" id="number">
+                            <label for="" class="form-label form-check-label">Введите дату рождения (Опционально) </label>
+                            <input class="form-control " type="date" id="date" name="trip-start"
+                                   min="1900-01-01" max="2023-01-01" >
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-10">
-                            <label for="" class="form-label">Введите город</label>
-                            <input type="text" class="form-control" id="city">
+                            <label for="" class="form-label form-check-label">Введите номер телефона</label>
+                            <input type="text" class="form-control" id="number" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="" class=>Введите почту</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmailReg">
+                            <label for="" class="form-label form-check-label">Введите город</label>
+                            <input type="text" class="form-control" id="city" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="">Введите пароль</label>
+                        <label for="" class='form-check-label'>Введите почту</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPasswordReg" autocomplete="on">
+                            <input type="email" class="form-control" id="inputEmailReg" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="" >Введите пароль повторно</label>
+                        <label for="" class="form-check-label">Введите пароль</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" autocomplete="on">
+                            <input type="password" class="form-control" id="inputPasswordReg" autocomplete="on" required>
                         </div>
                     </div>
                     <div class="form-group form-check">
@@ -160,15 +154,15 @@
                     </div>
                     <br>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="user">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="user" required>
                         <label class="form-check-label" for="inlineRadio1">Пользователь</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="shopkipper">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="shopkipper" required>
                         <label class="form-check-label" for="inlineRadio2">Кладовщик</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="delivery">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="delivery" required>
                         <label class="form-check-label" for="inlineRadio3">Курьер</label>
                     </div>
                     <button class="btn btn-primary" id="reg">Регистрация</button>

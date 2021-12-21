@@ -55,7 +55,7 @@
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Личные данные</h4>
-        <form class="needs-validation" novalidate>
+        <form onsubmit="return false;" class="needs-validation" novalidate>
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">Имя</label>
@@ -83,7 +83,7 @@
 
             <div class="col-12">
               <label for="number" required class="form-label">Телефон <span class="text-muted"></span></label>
-              <input type="text" class="form-control" id="number" placeholder="+71488137722" required>
+              <input type="number" class="form-control" id="number" placeholder="+71488137722" required>
               <div class="invalid-feedback">
                 Введите свой номер телефона.
               </div>
@@ -141,8 +141,10 @@
           </div>
 
           <hr class="my-4">
-          <button class="w-100 btn btn-primary btn-lg" type="submit" id="orderss">Оформить заказ</button>
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Проверить введёные данные на корректность</button>
         </form>
+        <br>
+        <button class="w-100 btn btn-primary btn-lg" type="submit" id="orderss">Оформить заказ</button>
       </div>
     </div>
     <br>
