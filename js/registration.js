@@ -56,6 +56,7 @@ document.getElementById("reg").addEventListener('click', function (event) {
             NumberPhone: document.getElementById('number').value,
             Role: role,
         }
+        alert("Успешная регистрация");
     }
 
     if (localStorage.getItem("users") !== null) {
