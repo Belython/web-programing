@@ -1,0 +1,34 @@
+doctype html
+head
+include component/script_head
+    title Создать товар
+include component/header
+main
+form(onsubmit='createProduct();return false')
+    .form-group
+        label.form-check-label(for='') Введите описание
+        .col-sm-10
+            input#inputTitleReg.form-control(type='text' required='')
+    .form-group
+        label.form-check-label(for='') Введите цену
+        .col-sm-10
+            input#inputPriceReg.form-control(type='number' required='')
+    .form-group
+        label.form-check-label(for='') Введите количество
+        .col-sm-10
+            input#inputCountReg.form-control(type='number' required='')
+    button#regproduct.btn.btn-primary Добавить товар
+
+ul#products
+.merge_elem
+    .wrapper_form
+        form
+            label() Введите текст:
+            input#inp_title
+            button.btn.btn-primary(onclick='handleSubmitNewMessageProduct()') Оповестить о новом товаре
+include component/footer
+include component/script_foot
+script(src='../js/Network.js')
+script(src='../js/CRUD/Product/createProduct.js')
+script(src='https://cdn.socket.io/4.5.0/socket.io.js')
+script(src='../js/websocket_Product.js')

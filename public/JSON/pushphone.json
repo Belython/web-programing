@@ -1,0 +1,32 @@
+{
+    "00013": {
+        "name": "Сотовый телефон SUNWIND CITI C2401, синий",
+        "price": "3000",
+        "img": "../photos/push1.jpg"
+    },
+    "00014": {
+        "name": "Сотовый телефон SUNWIND CITI A1701, черный",
+        "price": "3500",
+        "img": "../photos/nokia.jpg"
+    },
+    "00015": {
+        "name": "Сотовый телефон DIGMA Linx S240, серый/оранжевый",
+        "price": "4000",
+        "img": "../photos/push2.jpg"
+    },
+    "00016": {
+        "name": "Сотовый телефон PANASONIC TU456, красный",
+        "price": "2369",
+        "img": "../photos/push3.jpg"
+    },
+    "00017": {
+        "name": "Сотовый телефон NOKIA 106, серый",
+        "price": "4569",
+        "img": "../photos/push4.jpg"
+    },
+    "00018": {
+        "name": "Сотовый телефон PANASONIC TU150, красный",
+        "price": "5000",
+        "img": "../photos/push5.jpg"
+    }
+}

@@ -1,0 +1,104 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='description' content='Лучшие магазин электроники на всё СНГ пространстве. Здесь вы найдёте такие вещи, как смартфоны, комплектующие для ПК и много другое.')
+    meta(name='keywords' content='интернет магазин, электроника, реклама, смартфоны')
+    link(rel='icon' type='img/png' href='../photos/programmer.png')
+    title &Zcy;&acy;&kcy;&acy;&zcy;
+    link(rel='canonical' href='https://getbootstrap.com/docs/5.1/examples/checkout/')
+    // Bootstrap core CSS
+    link(href='../css/bootstrap.css' rel='stylesheet')
+    style.
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    // Custom styles for this template
+    link(href='../css/form-validation.css' rel='stylesheet')
+.container
+    main
+        .py-5.text-center
+            img.d-block.mx-auto.mb-4(src='../photos/AJc_4217bic.jpg' alt='' width='288' height='208')
+            h2 &Ocy;&fcy;&ocy;&rcy;&mcy;&lcy;&iecy;&ncy;&icy;&iecy; &zcy;&acy;&kcy;&acy;&zcy;&acy;
+        .row.g-5
+            .col-md-5.col-lg-4.order-md-last
+                h4.d-flex.justify-content-between.align-items-center.mb-3
+                    span.text-primary &Kcy;&ocy;&rcy;&zcy;&icy;&ncy;&acy;
+                    span#countCart.badge.bg-primary.rounded-pill 3
+                #cart
+            .col-md-7.col-lg-8
+                h4.mb-3 &Lcy;&icy;&chcy;&ncy;&ycy;&iecy; &dcy;&acy;&ncy;&ncy;&ycy;&iecy;
+                form.needs-validation(onsubmit='createOrder();return false')
+                    .row.g-3
+                        .col-sm-6
+                            label.form-label(for='firstName') &Icy;&mcy;&yacy;
+                            input#firstName.form-control(type='text' required='')
+                            .invalid-feedback
+                                | &Vcy;&vcy;&iecy;&dcy;&icy;&tcy;&iecy; &scy;&vcy;&ocy;&iocy; &icy;&mcy;&yacy;.
+                        .col-sm-6
+                            label.form-label(for='lastName') &Fcy;&acy;&mcy;&icy;&lcy;&icy;&yacy;
+                            input#lastName.form-control(type='text' required='')
+                            .invalid-feedback
+                                | &Vcy;&vcy;&iecy;&dcy;&icy;&tcy;&iecy; &scy;&vcy;&ocy;&yucy; &fcy;&acy;&mcy;&icy;&lcy;&icy;&yucy;.
+                        .col-12
+                            label.form-label(for='email')
+                                | Email
+                                span.text-muted (&Ocy;&pcy;&tscy;&icy;&ocy;&ncy;&acy;&lcy;&softcy;&ncy;&ocy;)
+                            input#email.form-control(type='email' placeholder='yasos@bibu.com')
+                            .invalid-feedback
+                                | Please enter a valid email address for shipping updates.
+                        .col-12
+                            label.form-label(for='number' required='')
+                                | &Tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;
+                                span.text-muted
+                            input#number.form-control(type='number' placeholder='+71488137722' required='')
+                            .invalid-feedback
+                                | &Vcy;&vcy;&iecy;&dcy;&icy;&tcy;&iecy; &scy;&vcy;&ocy;&jcy; &ncy;&ocy;&mcy;&iecy;&rcy; &tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;&acy;.
+                        hr.my-4
+                        .form-check
+                            input#same-address.form-check-input(type='checkbox')
+                            label.form-check-label(for='same-address')
+                                | &Vcy;&ycy; &scy;&ocy;&gcy;&lcy;&acy;&scy;&ncy;&ycy; &ocy;&tcy;&ocy;&scy;&lcy;&acy;&tcy;&softcy; &ncy;&acy;&mcy; &dcy;&iecy;&ncy;&iecy;&gcy;(&ecy;&tcy;&ocy; &tcy;&ocy;&chcy;&ncy;&ocy; &ncy;&iecy;
+                                | &ocy;&bcy;&mcy;&acy;&ncy;)
+                        .form-check
+                            input#save-info.form-check-input(type='checkbox')
+                            label.form-check-label(for='save-info') &Scy;&ocy;&khcy;&rcy;&acy;&ncy;&icy;&tcy;&softcy; &icy;&ncy;&fcy;&ocy;&rcy;&mcy;&acy;&tscy;&icy;&yacy; &dcy;&lcy;&yacy; &dcy;&acy;&lcy;&softcy;&ncy;&iecy;&jcy;&shcy;&iecy;&gcy;&ocy; &ocy;&bcy;&mcy;&acy;&ncy;&acy;(&ncy;&iecy;&tcy;)
+                        hr.my-4
+                        h4.mb-3 &Dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy;
+                        .my-3
+                            .form-check
+                                input#selfdelivery.form-check-input(name='paymentMethod' type='radio' required='')
+                                label.form-check-label(for='credit') &Scy;&acy;&mcy;&ocy;&vcy;&ycy;&vcy;&ocy;&zcy;
+                            .form-check
+                                input#delivery.form-check-input(name='paymentMethod' type='radio' required='')
+                                label.form-check-label(for='debit') &Kcy;&ucy;&rcy;&softcy;&iecy;&rcy;
+                        #addDelivery
+                        h4.mb-3 &Ocy;&pcy;&lcy;&acy;&tcy;&acy;
+                        .my-3
+                            .form-check
+                                input#credit.form-check-input(name='paymentMethod' type='radio' required='')
+                                label.form-check-label(for='credit') &Kcy;&rcy;&iecy;&dcy;&icy;&tcy;&ncy;&acy;&yacy; &kcy;&acy;&rcy;&tcy;&acy;
+                            .form-check
+                                input#debit.form-check-input(name='paymentMethod' type='radio' required='')
+                                label.form-check-label(for='debit') &Ncy;&acy;&lcy;&icy;&chcy;&ncy;&ycy;&iecy;
+                        #chekout
+                    hr.my-4
+                    button.w-100.btn.btn-primary.btn-lg(type='submit') &Pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&icy;&tcy;&softcy; &vcy;&vcy;&iecy;&dcy;&iocy;&ncy;&ycy;&iecy; &dcy;&acy;&ncy;&ncy;&ycy;&iecy; &ncy;&acy; &kcy;&ocy;&rcy;&rcy;&iecy;&kcy;&tcy;&ncy;&ocy;&scy;&tcy;&softcy;
+                br
+                button#orderss.w-100.btn.btn-primary.btn-lg(type='submit') &Ocy;&fcy;&ocy;&rcy;&mcy;&icy;&tcy;&softcy; &zcy;&acy;&kcy;&acy;&zcy;
+        br
+        button.w-100.btn.btn-primary.btn-lg(onclick="window.location='index.html' ")
+            | &Vcy;&iecy;&rcy;&ncy;&ucy;&tcy;&softcy;&scy;&yacy; &ncy;&acy; &gcy;&lcy;&acy;&vcy;&ncy;&ucy;&yucy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&ucy;
+script(src='../js/form-validation.js')
+script(src='../js/bootstrap.js')
+script(src='../js/jquery.min.js')
+script(src='../js/order.js')
+script(src='../js/CRUD/Order/createOrder.js')

@@ -1,0 +1,31 @@
+nav.navbar.navbar-expand-xl.navbar-light(style='background-color: #ff8000;')
+  .container
+    a.navbar-brand(href='/') &Ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&icy;&kcy;&acy; &ocy;&tcy; &Vcy;&iecy;&lcy;&icy;&kcy;&ocy;&dcy;&ncy;&ocy;&gcy;&ocy; &Acy;&lcy;&iecy;&kcy;&scy;&acy;&ncy;&dcy;&rcy;&acy;
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarContent' aria-controls='navbarContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarContent.collapse.navbar-collapse
+      ul#menu.navbar-nav.me-2.mb-2
+        li.nav-item
+          a.nav-link(href='Buy.html') &Kcy;&ocy;&rcy;&zcy;&icy;&ncy;&acy;
+        li.nav-item
+          a.nav-link(href='delivery.html') &Dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy;
+        li.nav-item
+          a.nav-link(href='Shops.html') &Mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy;&ycy;
+        li.nav-item
+          a.nav-link(href='Form.html') &Kcy;&ocy;&mcy;&mcy;&iecy;&ncy;&tcy;&acy;&rcy;&icy;&icy;
+        li.nav-item
+          a.nav-link(href='Product.html') Создать товар
+        form.d-flex(action='')
+          input#text-to-find.form-control.me-2(type='text' value='')
+          input.btn.btn-outline-dark(type='button' onclick="javascript: FindOnPage('text-to-find'); return false;" value='Искать')
+        li#modal_user.nav-item
+        li#modal_auth.nav-item.dropdown
+          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false') Личный кабинет
+          ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+            li
+              a.dropdown-item.btn.btn-primary#login Войти через гитхаб
+        script.
+          shineLinks("navbarContent")
+        #exit
+script(src='../js/CRUD/User/createUser.js')
+script(src='../js/auth.js')

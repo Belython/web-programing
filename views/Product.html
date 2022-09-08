@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head></head>
+<meta charset='UTF-8'>
+<meta name='description'
+      content='Лучшие магазин электроники на всё СНГ пространстве. Здесь вы найдёте такие вещи, как смартфоны, комплектующие для ПК и много другое.'>
+<meta name='keywords' content='интернет магазин, электроника, реклама, смартфоны'>
+<link rel='icon' type='img/png' href='../photos/programmer.png'>
+<link rel='stylesheet' href='../css/style.css'>
+<link rel='stylesheet' href='../css/bootstrap.css'>
+<script src='../js/script.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/supertokens/supertokens-website/bundle/bundle.js'></script>
+<style>img {
+    border: 0 !important;
+}</style><title>Создать товар</title>
+<nav class='navbar navbar-expand-xl navbar-light' style='background-color: #ff8000;'>
+  <div class='container'><a class='navbar-brand' href='/'>&Ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&icy;&kcy;&acy; &ocy;&tcy;
+    &Vcy;&iecy;&lcy;&icy;&kcy;&ocy;&dcy;&ncy;&ocy;&gcy;&ocy; &Acy;&lcy;&iecy;&kcy;&scy;&acy;&ncy;&dcy;&rcy;&acy;</a>
+    <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarContent'
+            aria-controls='navbarContent' aria-expanded='false' aria-label='Toggle navigation'><span
+      class='navbar-toggler-icon'></span></button>
+    <div class='collapse navbar-collapse' id='navbarContent'>
+      <ul class='navbar-nav me-2 mb-2' id='menu'>
+        <li class='nav-item'><a class='nav-link' href='Buy.html'>&Kcy;&ocy;&rcy;&zcy;&icy;&ncy;&acy;</a></li>
+        <li class='nav-item'><a class='nav-link' href='delivery.html'>&Dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy;</a></li>
+        <li class='nav-item'><a class='nav-link' href='Shops.html'>&Mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy;&ycy;</a></li>
+        <li class='nav-item'><a class='nav-link' href='Form.html'>&Kcy;&ocy;&mcy;&mcy;&iecy;&ncy;&tcy;&acy;&rcy;&icy;&icy;</a>
+        </li>
+        <li class='nav-item'><a class='nav-link' href='Product.html'>Создать товар</a></li>
+        <form class='d-flex' action=''><input class='form-control me-2' id='text-to-find' type='text' value=''><input
+          class='btn btn-outline-dark' type='button' onclick="javascript: FindOnPage('text-to-find'); return false;"
+          value='Искать'></form>
+        <li class='nav-item' id='modal_user'></li>
+        <li class='nav-item dropdown' id='modal_auth'><a class='nav-link dropdown-toggle' id='navbarDropdownMenuLink'
+                                                         href='#' role='button' data-bs-toggle='dropdown'
+                                                         aria-expanded='false'>Личный кабинет</a>
+          <ul class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
+            <li><a class='dropdown-item btn btn-primary' id='login'>Войти через гитхаб</a></li>
+          </ul>
+        </li>
+        <script>shineLinks('navbarContent');</script>
+        <div id='exit'></div>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src='../js/CRUD/User/createUser.js'></script>
+<script src='../js/auth.js'></script>
+<main></main>
+<form onsubmit='createProduct();return false'>
+  <div class='form-group'><label class='form-check-label' for=''>Введите описание</label>
+    <div class='col-sm-10'><input class='form-control' id='inputTitleReg' type='text' required=''></div>
+  </div>
+  <div class='form-group'><label class='form-check-label' for=''>Введите цену</label>
+    <div class='col-sm-10'><input class='form-control' id='inputPriceReg' type='number' required=''></div>
+  </div>
+  <div class='form-group'><label class='form-check-label' for=''>Введите количество</label>
+    <div class='col-sm-10'><input class='form-control' id='inputCountReg' type='number' required=''></div>
+  </div>
+  <button class='btn btn-primary' id='regproduct'>Добавить товар</button>
+</form>
+<ul id='products'></ul>
+<div class='merge_elem'>
+  <div class='wrapper_form'><input id='form_label' type='checkbox'><label class='btn_form' for='form_label'>+</label>
+    <form class='popup' action='' id='post_product'><label for='inp_title'>Input title:</label><input id='inp_title'>
+      <button onclick='handleSubmitNewMessageProduct()'>Submit</button>
+    </form>
+  </div>
+</div>
+<footer><br><br>
+  <div class='footer-top'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-lg-3 col-md-6'>
+          <div class='footer-info'><h3>&Ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&icy;&kcy;&acy; &ocy;&tcy; &Vcy;&iecy;&lcy;&icy;&kcy;&ocy;&dcy;&ncy;&ocy;&gcy;&ocy;
+            &Acy;&lcy;&iecy;&kcy;&scy;&acy;&ncy;&dcy;&rcy;&acy;</h3>
+            <p><strong>&Tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;:</strong> +7-905-433-**-**<br><strong></strong>
+              284450@niuitmo.ru<br></p>
+            <div class='social-links mt-3'><a href='https://vk.com/belython'><img src='../photos/vk.jpg'
+                                                                                  style='height: 32px; width: 32px;'></a>
+            </div>
+          </div>
+        </div>
+        <div class='col-lg-3 col-md-6 footer-links'><h4>&Scy;&scy;&ycy;&lcy;&kcy;&icy;</h4>
+          <ul>
+            <li><a href='#'>&Acy;&kcy;&tscy;&icy;&icy;</a></li>
+            <li><a href='#'>&Ucy;&scy;&lcy;&ucy;&gcy;&icy;</a></li>
+            <li><a href='#'>&Ocy;&bcy;&zcy;&ocy;&rcy;&ycy;</a></li>
+            <li><a href='#'>&Vcy;&acy;&kcy;&acy;&ncy;&scy;&icy;&icy;</a></li>
+            <li><a href='#'>&Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;</a></li>
+          </ul>
+        </div>
+        <div class='col-lg-3 col-md-6 footer-info'><h4>&Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;</h4>
+          <p>&Zcy;&dcy;&iecy;&scy;&softcy; &bcy;&ucy;&dcy;&ucy;&tcy; &ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy; &icy; &pcy;&ocy;&dcy;&pcy;&icy;&scy;&kcy;&acy;
+            &ncy;&acy; &rcy;&acy;&scy;&scy;&ycy;&lcy;&kcy;&ucy;</p>
+          <form action='#'></form>
+          <input type='email'><input type='submit' value='Подписка'></div>
+      </div>
+    </div>
+  </div>
+  <script>window.addEventListener('load', () => document.getElementById('demo').innerText = 'Pages load ' + loadTime + 'c' + ' (client) + ' + loadTimeServer + 'c' + ' (server)');</script>
+  <p id='demo'>Pages load</p></footer><!--script(src='../js/registration.js')-->
+<script src='../js/search.js'></script>
+<script src='../js/bootstrap.js'></script>
+<script src='../js/jquery.min.js'></script>
+<script src='../js/Network.js'></script>
+<script src='../js/CRUD/Product/createProduct.js'></script>
+<script src='https://cdn.socket.io/4.5.0/socket.io.js'></script>
+<script src='../js/websocket_Product.js'></script>

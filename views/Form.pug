@@ -1,0 +1,59 @@
+doctype html
+head
+include component/script_head
+    title &Kcy;&ocy;&mcy;&mcy;&iecy;&ncy;&tcy;&acy;&rcy;&icy;&icy;
+include component/header
+main
+    .container
+        .row
+            .col-lg-12
+                h2.p-3.text-center
+                    | &Kcy;&ocy;&mcy;&mcy;&iecy;&ncy;&tcy;&acy;&rcy;&icy;&icy; &scy;&acy;&jcy;&tcy;&acy;
+            .col-lg-6
+                #comment-field
+            .col-lg-6
+                form
+                    .form-group
+                        label &Ocy;&tscy;&iecy;&ncy;&icy;&tcy;&iecy; &scy;&acy;&jcy;&tcy;:
+                        .form_item
+                            .form_label
+                            .ratting.rating_set
+                                .rating_body
+                                    .rating_active
+                                    .rating_items
+                                        input.rating_item(type='radio' value='1' name='rating')
+                                        input.rating_item(type='radio' value='2' name='rating')
+                                        input.rating_item(type='radio' value='3' name='rating')
+                                        input.rating_item(type='radio' value='4' name='rating')
+                                        input.rating_item(type='radio' value='5' name='rating')
+                                .rating_value 0
+                    .form-group
+                        label(for='comment-name') &Icy;&mcy;&yacy;:
+                        input#comment-name.form-control(type='email' placeholder='Введите имя')
+                    .form-group
+                        label(for='comment-plus') &Dcy;&ocy;&scy;&tcy;&ocy;&icy;&ncy;&scy;&tcy;&vcy;&acy;:
+                        textarea#comment-plus.form-control(type='password' placeholder='Текст достоинств')
+                    .form-group
+                        label(for='comment-minus') &Ncy;&iecy;&dcy;&ocy;&scy;&tcy;&acy;&tcy;&kcy;&icy;:
+                        textarea#comment-minus.form-control(type='password' placeholder='Текс недостатков')
+                    .form-group
+                        label(for='comment-body') &Kcy;&ocy;&mcy;&mcy;&iecy;&ncy;&tcy;&acy;&rcy;&icy;&jcy;:
+                        textarea#comment-body.form-control(type='password' placeholder='Текст комментария')
+                    .form-group.ms-0
+                        button#comment-add.btn.btn-primary(type='submit') &Dcy;&ocy;&bcy;&acy;&vcy;&softcy;&tcy;&iecy; &kcy;&ocy;&mcy;&mcy;&iecy;&ncy;&tcy;&acy;&rcy;&icy;&jcy;
+    .form_item
+        .text-center.form_label &Rcy;&iecy;&jcy;&tcy;&icy;&ncy;&gcy; &scy;&acy;&jcy;&tcy;&acy;
+        .ratting.rating_set.d-flex.justify-content-center(data-ajax='true')
+            .rating_body
+                .rating_active
+                .rating_items
+                    input.rating_item(type='radio' value='1' name='rating')
+                    input.rating_item(type='radio' value='2' name='rating')
+                    input.rating_item(type='radio' value='3' name='rating')
+                    input.rating_item(type='radio' value='4' name='rating')
+                    input.rating_item(type='radio' value='5' name='rating')
+            .rating_value 2.6
+include component/footer
+include component/script_foot
+script(src='../js/form.js')
+script(src='../js/Ratings.js')

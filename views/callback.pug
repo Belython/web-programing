@@ -1,0 +1,30 @@
+doctype html
+head
+  title Калбэк
+  meta(charset='UTF-8')
+body
+  h1 Не наход
+  script(src='https://cdn.jsdelivr.net/gh/supertokens/supertokens-website/bundle/bundle.js')
+  script.
+    window.addEventListener('load', async function(event) {
+      supertokens.init({
+        apiDomain: "https://arcane-crag-35636.herokuapp.com",
+        apiBasePath: "/api"
+      });
+      let code = new URL(window.location.href).searchParams.get('code');
+      await fetch("https://arcane-crag-35636.herokuapp.com/api/signinup", {
+        method: "POST",
+        headers: {
+          "rid": "thirdparty",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          code,
+          redirectURI: "https://arcane-crag-35636.herokuapp.com/callback/github",
+          thirdPartyId: "github"
+        })
+      });
+
+      window.location.href = "/";
+
+    });

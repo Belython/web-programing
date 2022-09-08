@@ -1,0 +1,32 @@
+{
+  "00049": {
+    "name": "Ноутбук ASUS ROG G513IM-HN004T, 15.6\", IPS, AMD Ryzen 7 4800H 2.9ГГц, 8ГБ, 512ГБ SSD, NVIDIA GeForce RTX 3060 для ноутбуков - 6144 Мб, Windows 10, 90NR0521-M01310, черный",
+    "price": "180000",
+    "img": "../photos/game1.jpg"
+  },
+  "00050": {
+    "name": "Ноутбук MSI GF63 Thin 10UC-491XRU, 15.6\", IPS, Intel Core i5 10500H 2.5ГГц, 16ГБ, 512ГБ SSD, NVIDIA GeForce RTX 3050 для ноутбуков - 4096 Мб, Free DOS, 9S7-16R512-491, черный",
+    "price": "250000",
+    "img": "../photos/game2.jpg"
+  },
+  "00051": {
+    "name": "Ноутбук Acer Nitro 5 AN517-52-571N, 17.3\", IPS, Intel Core i5 10300H 2.5ГГц, 16ГБ, 512ГБ SSD, NVIDIA GeForce RTX 3050 Ti - 4096 Мб, Eshell, NH.QDWER.004, черный",
+    "price": "350000",
+    "img": "../photos/game3.jpg"
+  },
+  "00052": {
+    "name": "Ноутбук Gigabyte G5 KC-5RU1130SH, 15.6\", IPS, Intel Core i5 10500H 2.5ГГц, 16ГБ, 512ГБ SSD, NVIDIA GeForce RTX 3060 для ноутбуков - 6144 Мб, Windows 10 Home, KC-5RU1130SH, черный",
+    "price": "200000",
+    "img": "../photos/game4.jpg"
+  },
+  "00053": {
+    "name": "Ноутбук Acer Nitro 5 AN517-52-7688, 17.3\", IPS, Intel Core i7 10750H 2.6ГГц, 8ГБ, 512ГБ SSD, NVIDIA GeForce RTX 3060 для ноутбуков - 6144 Мб, Eshell, NH.QAWER.001, черный",
+    "price": "190000",
+    "img": "../photos/game5.jpg"
+  },
+  "00054": {
+    "name": "Ноутбук Lenovo Legion 5 17ACH6, 17.3\", AMD Ryzen 5 5600H 3.3ГГц, 8ГБ, 512ГБ SSD, NVIDIA GeForce RTX 3050 для ноутбуков - 4096 Мб, Windows 10, 82K00003RU, темно-синий",
+    "price": "50000",
+    "img": "../photos/game6.jpg"
+  }
+}
